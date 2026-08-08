@@ -2,9 +2,7 @@
 const productContainer = document.getElementById("productContainer");
 
 
-/* ==========================================
-   PRICE FORMAT
-   ========================================== */
+
 
 function formatPrice(price) {
 
@@ -15,9 +13,7 @@ function formatPrice(price) {
 }
 
 
-/* ==========================================
-   DISPLAY PRODUCTS
-   ========================================== */
+
 
 function displayProducts(productList) {
 
@@ -161,9 +157,7 @@ function displayProducts(productList) {
 }
 
 
-/* ==========================================
-   ORDER NOW
-   ========================================== */
+
 
 document.addEventListener("click", function(event) {
 
@@ -258,9 +252,6 @@ document.addEventListener("click", function(event) {
 });
 
 
-/* ==========================================
-   INITIALIZE
-   ========================================== */
 
 displayProducts(products);
 
