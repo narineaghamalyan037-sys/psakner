@@ -1,19 +1,20 @@
-
 const productContainer = document.getElementById("productContainer");
 
 
-
+/* ==========================================
+   PRICE FORMAT
+   ========================================== */
 
 function formatPrice(price) {
-
     return new Intl.NumberFormat("hy-AM").format(
         Number(price)
     ) + " ֏";
-
 }
 
 
-
+/* ==========================================
+   DISPLAY PRODUCTS
+   ========================================== */
 
 function displayProducts(productList) {
 
@@ -21,23 +22,14 @@ function displayProducts(productList) {
         return;
     }
 
-
     if (!productList || productList.length === 0) {
 
         productContainer.innerHTML = `
             <div class="col-12">
                 <div class="no-products">
-
                     <i class="bi bi-search"></i>
-
-                    <h3>
-                        Ապրանք չի գտնվել
-                    </h3>
-
-                    <p>
-                        Փոխեք որոնման կամ ֆիլտրի պայմանները։
-                    </p>
-
+                    <h3>Ապրանք չի գտնվել</h3>
+                    <p>Փոխեք որոնման կամ ֆիլտրի պայմանները։</p>
                 </div>
             </div>
         `;
@@ -76,13 +68,9 @@ function displayProducts(productList) {
 
 
                         <h3>
-
-                            <a
-                                href="product-details.html?id=${product.id}"
-                            >
+                            <a href="product-details.html?id=${product.id}">
                                 ${product.name}
                             </a>
-
                         </h3>
 
 
@@ -99,7 +87,7 @@ function displayProducts(productList) {
                         <div class="product-actions">
 
 
-                            <!-- ՄԱՆՐԱՄԱՍՆ -->
+                            <!-- DETAILS -->
 
                             <a
                                 href="product-details.html?id=${product.id}"
@@ -113,7 +101,7 @@ function displayProducts(productList) {
                             </a>
 
 
-                            <!-- ԱՎԵԼԱՑՆԵԼ ԶԱՄԲՅՈՒՂ -->
+                            <!-- ADD TO CART -->
 
                             <button
                                 type="button"
@@ -128,7 +116,7 @@ function displayProducts(productList) {
                             </button>
 
 
-                            <!-- ՊԱՏՎԻՐԵԼ -->
+                            <!-- ORDER NOW -->
 
                             <button
                                 type="button"
@@ -153,11 +141,12 @@ function displayProducts(productList) {
         `;
 
     }).join("");
-
 }
 
 
-
+/* ==========================================
+   ORDER NOW
+   ========================================== */
 
 document.addEventListener("click", function(event) {
 
@@ -178,20 +167,19 @@ document.addEventListener("click", function(event) {
 
 
     if (!productId) {
-
         console.error(
             "Պատվիրել կոճակի product ID-ն բացակայում է։"
         );
-
         return;
     }
 
 
-    const product = products.find(function(item) {
+    const product =
+        products.find(function(item) {
 
-        return Number(item.id) === productId;
+            return Number(item.id) === productId;
 
-    });
+        });
 
 
     if (!product) {
@@ -205,16 +193,18 @@ document.addEventListener("click", function(event) {
     }
 
 
-    let cart = JSON.parse(
-        localStorage.getItem("cart")
-    ) || [];
+    let cart =
+        JSON.parse(
+            localStorage.getItem("cart")
+        ) || [];
 
 
-    const existingProduct = cart.find(function(item) {
+    const existingProduct =
+        cart.find(function(item) {
 
-        return Number(item.id) === productId;
+            return Number(item.id) === productId;
 
-    });
+        });
 
 
     if (existingProduct) {
@@ -247,11 +237,15 @@ document.addEventListener("click", function(event) {
     );
 
 
-    window.location.href = "cart.html";
+    window.location.href =
+        "cart.html";
 
 });
 
 
+/* ==========================================
+   INITIALIZE
+   ========================================== */
 
 displayProducts(products);
 
