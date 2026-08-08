@@ -897,3 +897,109 @@ color: #1f4d3a;
 
 }
 
+.product-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+
+/* Մանրամասն կոճակը՝ ամբողջ լայնությամբ */
+
+.product-actions .details-btn {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 10px 12px;
+
+    border: 2px solid #1f4d3a;
+    border-radius: 25px;
+
+    background: #ffffff;
+    color: #1f4d3a;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.product-actions .details-btn:hover {
+    background: #1f4d3a;
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* Ավելացնել + Պատվիրել */
+
+.product-actions .order-btn {
+    width: 100%;
+    min-height: 44px;
+
+    padding: 9px 6px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* Պատվիրել */
+
+.product-actions .order-now {
+    background: #8a6a4a;
+    border-color: #8a6a4a;
+    color: #ffffff;
+}
+
+
+.product-actions .order-now:hover {
+    background: #e8d8c3;
+    border-color: #e8d8c3;
+    color: #1f4d3a;
+}
+
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .product-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .product-actions .details-btn {
+        grid-column: auto;
+    }
+
+    .product-actions .order-btn,
+    .product-actions .details-btn {
+        width: 100%;
+        min-height: 46px;
+        font-size: 14px;
+    }
+
+}
+
