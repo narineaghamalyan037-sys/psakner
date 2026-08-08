@@ -1,227 +1,140 @@
 ```javascript
-/* =========================================================
-   PRODUCTS.JS
-   Product Cards + Order Now
-   ========================================================= */
-
-
-const productContainer =
-    document.getElementById("productContainer");
-
-
-/* =========================================================
-   PRICE FORMAT
-   ========================================================= */
+const productContainer = document.getElementById("productContainer");
 
 function formatPrice(price) {
-
-    return new Intl.NumberFormat("hy-AM").format(
-        Number(price)
-    ) + " ֏";
-
+    return new Intl.NumberFormat("hy-AM").format(Number(price)) + " ֏";
 }
-
-
-/* =========================================================
-   DISPLAY PRODUCTS
-   ========================================================= */
 
 function displayProducts(productList) {
 
-    if (!productContainer) return;
-
+    if (!productContainer) {
+        return;
+    }
 
     if (!productList || productList.length === 0) {
 
-        productContainer.innerHTML = `
-
-            <div class="col-12">
-
-                <div class="no-products">
-
-                    <i class="bi bi-search"></i>
-
-                    <h3>
-                        Ապրանք չի գտնվել
-                    </h3>
-
-                    <p>
-                        Փոխեք որոնման կամ ֆիլտրի պայմանները։
-                    </p>
-
-                </div>
-
-            </div>
-
-        `;
+        productContainer.innerHTML =
+            '<div class="col-12">' +
+                '<div class="no-products">' +
+                    '<i class="bi bi-search"></i>' +
+                    '<h3>Ապրանք չի գտնվել</h3>' +
+                    '<p>Փոխեք որոնման կամ ֆիլտրի պայմանները։</p>' +
+                '</div>' +
+            '</div>';
 
         return;
     }
 
+    productContainer.innerHTML = productList.map(function(product) {
 
-    productContainer.innerHTML = productList.map(product => `
+        return (
+            '<div class="col-lg-3 col-md-6">' +
 
-        <div class="col-lg-3 col-md-6">
+                '<article class="product-card">' +
 
-            <article class="product-card">
+                    '<a href="product-details.html?id=' + product.id + '"' +
+                       ' class="product-image"' +
+                       ' aria-label="' + product.name + '">' +
 
+                        '<img src="' + product.image + '"' +
+                             ' alt="' + product.name + '"' +
+                             ' loading="lazy">' +
 
-                <!-- PRODUCT IMAGE -->
+                    '</a>' +
 
-                <a
-                    href="product-details.html?id=${product.id}"
-                    class="product-image"
-                    aria-label="${product.name}"
-                >
+                    '<div class="product-info">' +
 
-                    <img
-                        src="${product.image}"
-                        alt="${product.name}"
-                        loading="lazy"
-                    >
+                        '<span class="product-category">' +
+                            product.category +
+                        '</span>' +
 
-                </a>
+                        '<h3>' +
 
+                            '<a href="product-details.html?id=' +
+                                product.id +
+                            '">' +
 
-                <!-- PRODUCT INFORMATION -->
+                                product.name +
 
-                <div class="product-info">
+                            '</a>' +
 
+                        '</h3>' +
 
-                    <!-- CATEGORY -->
+                        '<p>' +
+                            product.description +
+                        '</p>' +
 
-                    <span class="product-category">
-                        ${product.category}
-                    </span>
+                        '<div class="price">' +
+                            formatPrice(product.price) +
+                        '</div>' +
 
+                        '<div class="product-actions">' +
 
-                    <!-- NAME -->
+                            '<a href="product-details.html?id=' +
+                                product.id +
+                            '"' +
+                            ' class="details-btn">' +
 
-                    <h3>
+                                '<i class="bi bi-eye"></i>' +
+                                ' Մանրամասն' +
 
-                        <a
-                            href="product-details.html?id=${product.id}"
-                        >
+                            '</a>' +
 
-                            ${product.name}
+                            '<button type="button"' +
+                                ' class="order-btn add-to-cart"' +
+                                ' data-id="' + product.id + '">' +
 
-                        </a>
+                                '<i class="bi bi-cart-plus"></i>' +
+                                ' Ավելացնել' +
 
-                    </h3>
+                            '</button>' +
 
+                            '<button type="button"' +
+                                ' class="order-btn order-now"' +
+                                ' data-id="' + product.id + '">' +
 
-                    <!-- DESCRIPTION -->
+                                '<i class="bi bi-bag-check"></i>' +
+                                ' Պատվիրել' +
 
-                    <p>
-                        ${product.description}
-                    </p>
+                            '</button>' +
 
+                        '</div>' +
 
-                    <!-- PRICE -->
+                    '</div>' +
 
-                    <div class="price">
+                '</article>' +
 
-                        ${formatPrice(product.price)}
+            '</div>'
+        );
 
-                    </div>
-
-
-                    <!-- ACTIONS -->
-
-                    <div class="product-actions">
-
-
-                        <!-- DETAILS -->
-
-                        <a
-                            href="product-details.html?id=${product.id}"
-                            class="details-btn"
-                        >
-
-                            <i class="bi bi-eye"></i>
-
-                            Մանրամասն
-
-                        </a>
-
-
-                        <!-- ADD TO CART -->
-
-                        <button
-                            type="button"
-                            class="order-btn add-to-cart"
-                            data-id="${product.id}"
-                        >
-
-                            <i class="bi bi-cart-plus"></i>
-
-                            Ավելացնել
-
-                        </button>
-
-
-                        <!-- ORDER NOW -->
-
-                        <button
-                            type="button"
-                            class="order-btn order-now"
-                            data-id="${product.id}"
-                        >
-
-                            <i class="bi bi-bag-check"></i>
-
-                            Պատվիրել
-
-                        </button>
-
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    `).join("");
-
+    }).join("");
 }
 
 
-/* =========================================================
+/* ==========================================
    ORDER NOW
-   ========================================================= */
+   ========================================== */
 
-document.addEventListener("click", function (event) {
+document.addEventListener("click", function(event) {
 
-    const button =
-        event.target.closest(".order-now");
+    var button = event.target.closest(".order-now");
 
-
-    if (!button) return;
-
-
-    event.preventDefault();
-
-
-    const productId =
-        Number(button.dataset.id);
-
-
-    if (!productId) {
-
-        console.error(
-            "Պատվիրել կոճակի product ID-ն բացակայում է։"
-        );
-
+    if (!button) {
         return;
     }
 
+    event.preventDefault();
 
-    const product = products.find(
-        item => Number(item.id) === productId
-    );
+    var productId = Number(button.dataset.id);
 
+    if (!productId) {
+        console.error("Պատվիրել կոճակի ID-ն բացակայում է։");
+        return;
+    }
+
+    var product = products.find(function(item) {
+        return Number(item.id) === productId;
+    });
 
     if (!product) {
 
@@ -233,71 +146,44 @@ document.addEventListener("click", function (event) {
         return;
     }
 
-
-    /* GET CURRENT CART */
-
-    let cart = JSON.parse(
+    var cart = JSON.parse(
         localStorage.getItem("cart")
     ) || [];
 
-
-    /* CHECK EXISTING PRODUCT */
-
-    const existingProduct = cart.find(
-        item => Number(item.id) === productId
-    );
-
-
-    /* INCREASE QUANTITY */
+    var existingProduct = cart.find(function(item) {
+        return Number(item.id) === productId;
+    });
 
     if (existingProduct) {
 
         existingProduct.quantity =
             Number(existingProduct.quantity || 0) + 1;
 
-    }
-
-
-    /* ADD NEW PRODUCT */
-
-    else {
+    } else {
 
         cart.push({
-
             id: product.id,
-
             name: product.name,
-
             price: Number(product.price),
-
             image: product.image,
-
             quantity: 1
-
         });
 
     }
-
-
-    /* SAVE CART */
 
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
-
-    /* GO TO CART */
-
-    window.location.href =
-        "cart.html";
+    window.location.href = "cart.html";
 
 });
 
 
-/* =========================================================
-   INITIAL DISPLAY
-   ========================================================= */
+/* ==========================================
+   DISPLAY PRODUCTS
+   ========================================== */
 
 displayProducts(products);
 ```
