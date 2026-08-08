@@ -1,649 +1,1287 @@
-<!-- ==========================================
-     PAYMENT METHOD
-========================================== -->
+<!DOCTYPE html>
+<html lang="hy">
 
-<section class="checkout-card payment-card">
+<head>
 
-    <div class="card-heading">
+    <meta charset="UTF-8">
 
-        <div class="heading-icon">
-            <i class="bi bi-credit-card-2-front"></i>
-        </div>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-        <div>
-            <h2>Վճարման եղանակ</h2>
+    <meta
+        name="description"
+        content="Պատվերի ձևակերպում և վճարման տվյալներ"
+    >
 
-            <p>
-                Ընտրեք Ձեզ հարմար անկանխիկ վճարման տարբերակը
-            </p>
-        </div>
+    <title>Պատվերի ձևակերպում | Ծաղկեպսակներ</title>
 
-    </div>
 
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
 
-    <div class="payment-options">
-
-
-        <!-- =========================
-             BANK TRANSFER
-        ========================== -->
-
-        <label class="payment-option">
-
-            <input
-                type="radio"
-                name="paymentMethod"
-                value="bank"
-                checked
-            >
-
-            <span class="payment-option-content">
-
-                <span class="payment-icon">
-                    <i class="bi bi-bank"></i>
-                </span>
-
-                <span class="payment-text">
-
-                    <strong>
-                        Բանկային փոխանցում
-                    </strong>
-
-                    <small>
-                        Փոխանցում նախապես՝ պատվերը հաստատելուց հետո
-                    </small>
-
-                </span>
-
-                <span class="payment-check">
-                    <i class="bi bi-check-lg"></i>
-                </span>
-
-            </span>
-
-        </label>
-
-
-        <!-- =========================
-             IDRAM
-        ========================== -->
-
-        <label class="payment-option">
-
-            <input
-                type="radio"
-                name="paymentMethod"
-                value="idram"
-            >
-
-            <span class="payment-option-content">
-
-                <span class="payment-icon idram-icon">
-                    <i class="bi bi-wallet2"></i>
-                </span>
-
-                <span class="payment-text">
-
-                    <strong>
-                        iDram
-                    </strong>
-
-                    <small>
-                        Վճարում iDram համակարգով
-                    </small>
-
-                </span>
-
-                <span class="payment-check">
-                    <i class="bi bi-check-lg"></i>
-                </span>
-
-            </span>
-
-        </label>
-
-
-        <!-- =========================
-             BANK CARD
-        ========================== -->
-
-        <label class="payment-option">
-
-            <input
-                type="radio"
-                name="paymentMethod"
-                value="card"
-            >
-
-            <span class="payment-option-content">
-
-                <span class="payment-icon">
-                    <i class="bi bi-credit-card"></i>
-                </span>
-
-                <span class="payment-text">
-
-                    <strong>
-                        Բանկային քարտ
-                    </strong>
-
-                    <small>
-                        Վճարում քարտով՝ առցանց
-                    </small>
-
-                </span>
-
-                <span class="payment-check">
-                    <i class="bi bi-check-lg"></i>
-                </span>
-
-            </span>
-
-        </label>
-
-
-        <!-- =========================
-             OTHER PAYMENT
-        ========================== -->
-
-        <label class="payment-option">
-
-            <input
-                type="radio"
-                name="paymentMethod"
-                value="other"
-            >
-
-            <span class="payment-option-content">
-
-                <span class="payment-icon">
-                    <i class="bi bi-phone"></i>
-                </span>
-
-                <span class="payment-text">
-
-                    <strong>
-                        Այլ վճարման համակարգ
-                    </strong>
-
-                    <small>
-                        Telcell, EasyPay կամ այլ հասանելի տարբերակ
-                    </small>
-
-                </span>
-
-                <span class="payment-check">
-                    <i class="bi bi-check-lg"></i>
-                </span>
-
-            </span>
-
-        </label>
-
-    </div>
-
-
-    <!-- ==========================================
-         PAYMENT DETAILS
-    =========================================== -->
-
-    <div
-        id="paymentDetails"
-        class="payment-details"
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
     >
 
 
-        <!-- ======================================
-             BANK DETAILS
-        ======================================= -->
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
 
-        <div
-            id="bankPaymentDetails"
-            class="payment-detail-card"
-        >
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
-            <div class="payment-detail-header">
 
-                <div class="payment-detail-icon">
-                    <i class="bi bi-bank"></i>
-                </div>
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
-                <div>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-                    <h3>
-                        Բանկային փոխանցման տվյալներ
-                    </h3>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-                    <p>
-                        Կատարեք փոխանցումը նշված տվյալներով
-                    </p>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-                </div>
 
-            </div>
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
 
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
-            <div class="bank-details">
 
+    <!-- =====================================================
+         CHECKOUT CSS
+    ====================================================== -->
 
-                <div class="bank-detail-row">
+    <link
+        rel="stylesheet"
+        href="css/checkout.css"
+    >
 
-                    <div>
+</head>
 
-                        <span class="bank-detail-label">
-                            Ստացող
-                        </span>
 
-                        <strong>
-                            Ձեր ընկերության անվանումը
-                        </strong>
+<body>
 
-                    </div>
 
-                </div>
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
+<header class="main-header">
 
-                <div class="bank-detail-row">
+    <div class="container">
 
-                    <div>
+        <div class="header-inner">
 
-                        <span class="bank-detail-label">
-                            Բանկ
-                        </span>
 
-                        <strong>
-                            Ձեր բանկի անվանումը
-                        </strong>
+            <!-- LOGO -->
 
-                    </div>
+            <a
+                href="index.html"
+                class="site-logo"
+            >
 
-                </div>
+                <span class="logo-icon">
+                    <i class="bi bi-flower1"></i>
+                </span>
 
+                <span class="logo-text">
+                    Ծաղկեպսակներ
+                </span>
 
-                <!-- ACCOUNT -->
+            </a>
 
-                <div class="bank-detail-row">
 
-                    <div>
+            <!-- NAVIGATION -->
 
-                        <span class="bank-detail-label">
-                            Հաշվեհամար
-                        </span>
+            <nav class="main-nav">
 
-                        <strong id="bankAccount">
-                            1234567890123456
-                        </strong>
-
-                    </div>
-
-                    <button
-                        type="button"
-                        class="copy-bank-btn"
-                        data-copy-target="bankAccount"
-                    >
-
-                        <i class="bi bi-copy"></i>
-
-                        Պատճենել
-
-                    </button>
-
-                </div>
-
-
-                <!-- IBAN -->
-
-                <div class="bank-detail-row">
-
-                    <div>
-
-                        <span class="bank-detail-label">
-                            IBAN
-                        </span>
-
-                        <strong id="bankIban">
-                            AM00 0000 0000 0000 0000 0000
-                        </strong>
-
-                    </div>
-
-                    <button
-                        type="button"
-                        class="copy-bank-btn"
-                        data-copy-target="bankIban"
-                    >
-
-                        <i class="bi bi-copy"></i>
-
-                        Պատճենել
-
-                    </button>
-
-                </div>
-
-
-                <div class="bank-detail-row">
-
-                    <div>
-
-                        <span class="bank-detail-label">
-                            ՀՎՀՀ
-                        </span>
-
-                        <strong>
-                            00000000
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="payment-purpose">
-
-                    <span>
-                        Փոխանցման նշանակություն
-                    </span>
-
-                    <strong id="paymentPurpose">
-                        Պատվեր №
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-            <!-- RECEIPT -->
-
-            <div class="receipt-upload">
-
-                <label for="paymentReceipt">
-
-                    <i class="bi bi-paperclip"></i>
-
-                    <span>
-
-                        <strong>
-                            Վճարման կտրոն
-                        </strong>
-
-                        <small>
-                            Կցեք կատարված փոխանցման կտրոնը
-                        </small>
-
-                    </span>
-
-                </label>
-
-                <input
-                    type="file"
-                    id="paymentReceipt"
-                    name="paymentReceipt"
-                    accept="image/jpeg,image/png,application/pdf"
+                <a
+                    href="index.html"
+                    class="nav-link"
                 >
+                    Գլխավոր
+                </a>
 
-            </div>
+                <a
+                    href="products.html"
+                    class="nav-link"
+                >
+                    Տեսականի
+                </a>
+
+                <a
+                    href="about.html"
+                    class="nav-link"
+                >
+                    Մեր մասին
+                </a>
+
+                <a
+                    href="delivery.html"
+                    class="nav-link"
+                >
+                    Առաքում
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="nav-link"
+                >
+                    Կապ
+                </a>
+
+            </nav>
 
 
-            <p class="payment-note">
+            <!-- CART -->
 
-                <i class="bi bi-info-circle"></i>
+            <a
+                href="cart.html"
+                class="header-cart"
+                aria-label="Զամբյուղ"
+            >
 
-                Պատվերը կմշակվի վճարման հաստատումից հետո։
+                <i class="bi bi-bag"></i>
+
+                <span class="cart-label">
+                    Զամբյուղ
+                </span>
+
+                <span
+                    id="cartCount"
+                    class="cart-count"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="checkout-hero">
+
+    <div class="container">
+
+        <div class="checkout-hero-content">
+
+            <span class="checkout-eyebrow">
+
+                <i class="bi bi-flower1"></i>
+
+                Պատվերի ձևակերպում
+
+            </span>
+
+
+            <h1>
+
+                Ձեր պատվերը՝
+                <span>մեկ քայլ հեռավորության վրա</span>
+
+            </h1>
+
+
+            <p>
+
+                Լրացրեք անհրաժեշտ տվյալները,
+                ընտրեք վճարման եղանակը և հաստատեք պատվերը։
 
             </p>
 
         </div>
 
+    </div>
 
-        <!-- ======================================
-             IDRAM DETAILS
-        ======================================= -->
-
-        <div
-            id="idramPaymentDetails"
-            class="payment-detail-card"
-            hidden
-        >
-
-            <div class="payment-detail-header">
-
-                <div class="payment-detail-icon">
-                    <i class="bi bi-wallet2"></i>
-                </div>
-
-                <div>
-
-                    <h3>
-                        iDram վճարում
-                    </h3>
-
-                    <p>
-                        Կատարեք փոխանցումը iDram համակարգով
-                    </p>
-
-                </div>
-
-            </div>
+</section>
 
 
-            <div class="bank-detail-row">
 
-                <div>
+<!-- =========================================================
+     CHECKOUT MAIN
+========================================================= -->
 
-                    <span class="bank-detail-label">
-                        iDram հաշիվ
-                    </span>
+<main class="checkout-page">
 
-                    <strong id="idramAccount">
-                        000000000
-                    </strong>
-
-                </div>
-
-                <button
-                    type="button"
-                    class="copy-bank-btn"
-                    data-copy-target="idramAccount"
-                >
-
-                    <i class="bi bi-copy"></i>
-
-                    Պատճենել
-
-                </button>
-
-            </div>
+    <div class="container">
 
 
-            <div class="payment-purpose">
+        <!-- =================================================
+             PROGRESS
+        ================================================== -->
 
-                <span>
-                    Փոխանցման նշանակություն
+        <div class="checkout-progress">
+
+
+            <div class="progress-step completed">
+
+                <span class="progress-icon">
+
+                    <i class="bi bi-bag-check"></i>
+
                 </span>
 
-                <strong id="idramPurpose">
-                    Պատվեր №
-                </strong>
+                <span>
+                    Զամբյուղ
+                </span>
 
             </div>
 
 
-            <div class="receipt-upload">
-
-                <label for="idramReceipt">
-
-                    <i class="bi bi-paperclip"></i>
-
-                    <span>
-
-                        <strong>
-                            Վճարման կտրոն
-                        </strong>
-
-                        <small>
-                            Կցեք iDram փոխանցման կտրոնը
-                        </small>
-
-                    </span>
-
-                </label>
-
-                <input
-                    type="file"
-                    id="idramReceipt"
-                    name="idramReceipt"
-                    accept="image/jpeg,image/png,application/pdf"
-                >
-
-            </div>
-
-        </div>
+            <div class="progress-line active"></div>
 
 
-        <!-- ======================================
-             CARD DETAILS
-        ======================================= -->
+            <div class="progress-step active">
 
-        <div
-            id="cardPaymentDetails"
-            class="payment-detail-card"
-            hidden
-        >
+                <span class="progress-icon">
 
-            <div class="payment-detail-header">
+                    <i class="bi bi-person-check"></i>
 
-                <div class="payment-detail-icon">
-                    <i class="bi bi-credit-card"></i>
-                </div>
+                </span>
 
-                <div>
-
-                    <h3>
-                        Բանկային քարտ
-                    </h3>
-
-                    <p>
-                        Քարտային վճարումը կկատարվի առցանց
-                    </p>
-
-                </div>
+                <span>
+                    Պատվերի տվյալներ
+                </span>
 
             </div>
 
 
-            <div class="online-payment-message">
+            <div class="progress-line"></div>
 
-                <i class="bi bi-shield-check"></i>
 
-                <div>
+            <div class="progress-step">
 
-                    <strong>
-                        Անվտանգ առցանց վճարում
-                    </strong>
+                <span class="progress-icon">
 
-                    <p>
-                        Վճարման համակարգը կբացվի պատվերը
-                        հաստատելուց հետո։
-                    </p>
+                    <i class="bi bi-check2-circle"></i>
 
-                </div>
+                </span>
+
+                <span>
+                    Հաստատում
+                </span>
 
             </div>
 
         </div>
 
 
-        <!-- ======================================
-             OTHER PAYMENT
-        ======================================= -->
 
-        <div
-            id="otherPaymentDetails"
-            class="payment-detail-card"
-            hidden
+        <!-- =================================================
+             FORM
+        ================================================== -->
+
+        <form
+            id="checkoutForm"
+            class="checkout-form"
+            enctype="multipart/form-data"
         >
 
-            <div class="payment-detail-header">
 
-                <div class="payment-detail-icon">
-                    <i class="bi bi-phone"></i>
+            <div class="row g-4">
+
+
+                <!-- =========================================
+                     LEFT COLUMN
+                ========================================== -->
+
+                <div class="col-lg-7">
+
+
+                    <!-- =====================================
+                         CUSTOMER + DELIVERY
+                    ====================================== -->
+
+                    <section class="checkout-card">
+
+
+                        <div class="card-heading">
+
+                            <div class="heading-icon">
+
+                                <i class="bi bi-truck"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Պատվիրատուի և առաքման տվյալներ
+                                </h2>
+
+                                <p>
+                                    Լրացրեք պատվերը ստանալու համար անհրաժեշտ տվյալները
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-grid">
+
+
+                            <!-- NAME -->
+
+                            <div class="form-group full-width">
+
+                                <label for="fullName">
+
+                                    Անուն, ազգանուն
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        placeholder="Օր․՝ Անի Սարգսյան"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PHONE -->
+
+                            <div class="form-group">
+
+                                <label for="phone">
+
+                                    Հեռախոսահամար
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-telephone"></i>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="+374 XX XX XX XX"
+                                        autocomplete="tel"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- CITY -->
+
+                            <div class="form-group">
+
+                                <label for="city">
+
+                                    Քաղաք / բնակավայր
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-geo-alt"></i>
+
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        placeholder="Երևան"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ADDRESS -->
+
+                            <div class="form-group full-width">
+
+                                <label for="address">
+
+                                    Առաքման հասցե
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-house"></i>
+
+                                    <input
+                                        type="text"
+                                        id="address"
+                                        name="address"
+                                        placeholder="Փողոց, շենք, բնակարան"
+                                        autocomplete="street-address"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- DATE -->
+
+                            <div class="form-group">
+
+                                <label for="deliveryDate">
+
+                                    Առաքման օր
+
+                                </label>
+
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-calendar3"></i>
+
+                                    <input
+                                        type="date"
+                                        id="deliveryDate"
+                                        name="deliveryDate"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- TIME -->
+
+                            <div class="form-group">
+
+                                <label for="deliveryTime">
+
+                                    Նախընտրելի ժամ
+
+                                </label>
+
+
+                                <div class="input-wrapper">
+
+                                    <i class="bi bi-clock"></i>
+
+                                    <select
+                                        id="deliveryTime"
+                                        name="deliveryTime"
+                                    >
+
+                                        <option value="">
+                                            Ընտրեք ժամը
+                                        </option>
+
+                                        <option value="09:00 - 12:00">
+                                            09:00 - 12:00
+                                        </option>
+
+                                        <option value="12:00 - 15:00">
+                                            12:00 - 15:00
+                                        </option>
+
+                                        <option value="15:00 - 18:00">
+                                            15:00 - 18:00
+                                        </option>
+
+                                        <option value="18:00 - 21:00">
+                                            18:00 - 21:00
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =====================================
+                         RIBBON MESSAGE
+                    ====================================== -->
+
+                    <section class="checkout-card ribbon-card">
+
+
+                        <div class="card-heading">
+
+                            <div class="heading-icon">
+
+                                <i class="bi bi-chat-heart"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Լենտայի գրություն
+                                </h2>
+
+                                <p>
+                                    Գրեք այն տեքստը, որը ցանկանում եք տեսնել ծաղկեպսակի լենտայի վրա
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="ribbonText">
+
+                                Լենտայի գրությունը
+
+                            </label>
+
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-pencil"></i>
+
+                                <input
+                                    type="text"
+                                    id="ribbonText"
+                                    name="ribbonText"
+                                    maxlength="120"
+                                    placeholder="Օր․՝ Սիրով և հավերժ հիշողությամբ..."
+                                >
+
+                            </div>
+
+
+                            <small class="field-help">
+
+                                Առավելագույնը 120 նիշ
+
+                            </small>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- =====================================
+                         PAYMENT
+                    ====================================== -->
+
+                    <section class="checkout-card payment-card">
+
+
+                        <div class="card-heading">
+
+                            <div class="heading-icon">
+
+                                <i class="bi bi-credit-card"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Վճարման եղանակ
+                                </h2>
+
+                                <p>
+                                    Ընտրեք Ձեզ հարմար վճարման տարբերակը
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="payment-options">
+
+
+                            <!-- IDRAM -->
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="idram"
+                                    checked
+                                >
+
+
+                                <span class="payment-option-content">
+
+                                    <span class="payment-icon">
+
+                                        <i class="bi bi-wallet2"></i>
+
+                                    </span>
+
+
+                                    <span class="payment-text">
+
+                                        <strong>
+                                            iDram
+                                        </strong>
+
+                                        <small>
+                                            Վճարում iDram համակարգով
+                                        </small>
+
+                                    </span>
+
+
+                                    <span class="payment-check">
+
+                                        <i class="bi bi-check-lg"></i>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <!-- BANK TRANSFER -->
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="transfer"
+                                >
+
+
+                                <span class="payment-option-content">
+
+                                    <span class="payment-icon">
+
+                                        <i class="bi bi-bank"></i>
+
+                                    </span>
+
+
+                                    <span class="payment-text">
+
+                                        <strong>
+                                            Բանկային փոխանցում
+                                        </strong>
+
+                                        <small>
+                                            Նախապես փոխանցում՝ պատվերը հաստատելուց հետո
+                                        </small>
+
+                                    </span>
+
+
+                                    <span class="payment-check">
+
+                                        <i class="bi bi-check-lg"></i>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <!-- OTHER PAYMENT -->
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="other"
+                                >
+
+
+                                <span class="payment-option-content">
+
+                                    <span class="payment-icon">
+
+                                        <i class="bi bi-phone"></i>
+
+                                    </span>
+
+
+                                    <span class="payment-text">
+
+                                        <strong>
+                                            Այլ վճարման համակարգ
+                                        </strong>
+
+                                        <small>
+                                            Վճարման եղանակը կհաստատենք Ձեզ հետ կապվելուց հետո
+                                        </small>
+
+                                    </span>
+
+
+                                    <span class="payment-check">
+
+                                        <i class="bi bi-check-lg"></i>
+
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             BANK DETAILS
+                        ================================== -->
+
+                        <div
+                            id="bankTransferDetails"
+                            class="bank-transfer-details"
+                            hidden
+                        >
+
+
+                            <div class="bank-details-header">
+
+                                <div class="bank-details-icon">
+
+                                    <i class="bi bi-bank2"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        Բանկային փոխանցման տվյալներ
+                                    </h3>
+
+                                    <p>
+                                        Փոխանցումը կատարելուց հետո կցեք վճարման կտրոնը։
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="bank-details-list">
+
+
+                                <div class="bank-detail-row">
+
+                                    <span>
+                                        Ստացող
+                                    </span>
+
+                                    <strong>
+                                        Ձեր ընկերության անունը
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="bank-detail-row">
+
+                                    <span>
+                                        Բանկ
+                                    </span>
+
+                                    <strong>
+                                        Ձեր բանկի անվանումը
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="bank-detail-row">
+
+                                    <span>
+                                        Հաշվեհամար
+                                    </span>
+
+
+                                    <div class="copy-value">
+
+                                        <strong id="bankAccount">
+                                            0000000000000000
+                                        </strong>
+
+                                        <button
+                                            type="button"
+                                            class="copy-btn"
+                                            data-copy-target="bankAccount"
+                                            aria-label="Պատճենել հաշվեհամարը"
+                                        >
+
+                                            <i class="bi bi-copy"></i>
+
+                                            Պատճենել
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bank-detail-row">
+
+                                    <span>
+                                        IBAN
+                                    </span>
+
+                                    <strong>
+                                        AM00 0000 0000 0000 0000 0000
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="bank-detail-row">
+
+                                    <span>
+                                        ՀՎՀՀ
+                                    </span>
+
+                                    <strong>
+                                        00000000
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="transfer-purpose">
+
+                                <span>
+                                    Փոխանցման նշանակություն
+                                </span>
+
+                                <strong id="transferPurpose">
+                                    Պատվեր
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- PAYMENT RECEIPT -->
+
+                            <div class="receipt-upload">
+
+
+                                <label
+                                    for="paymentReceipt"
+                                    class="receipt-label"
+                                >
+
+                                    <span class="receipt-icon">
+
+                                        <i class="bi bi-cloud-arrow-up"></i>
+
+                                    </span>
+
+
+                                    <span>
+
+                                        <strong>
+                                            Վճարման կտրոն
+                                        </strong>
+
+                                        <small>
+                                            Կցեք փոխանցման կտրոնը
+                                        </small>
+
+                                    </span>
+
+                                </label>
+
+
+                                <input
+                                    type="file"
+                                    id="paymentReceipt"
+                                    name="paymentReceipt"
+                                    accept="image/*,.pdf"
+                                >
+
+
+                                <div
+                                    id="receiptPreview"
+                                    class="receipt-preview"
+                                ></div>
+
+                            </div>
+
+
+
+                            <p class="bank-note">
+
+                                <i class="bi bi-info-circle"></i>
+
+                                Պատվերը կսկսենք մշակել վճարման հաստատումից հետո։
+
+                            </p>
+
+
+                        </div>
+
+
+                    </section>
+
+
+
+                    <!-- =====================================
+                         ADDITIONAL NOTE
+                    ====================================== -->
+
+                    <section class="checkout-card">
+
+
+                        <div class="card-heading">
+
+                            <div class="heading-icon">
+
+                                <i class="bi bi-chat-left-text"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Լրացուցիչ տեղեկություն
+                                </h2>
+
+                                <p>
+                                    Ցանկության դեպքում ավելացրեք լրացուցիչ նշում
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="orderNote">
+                                Հաղորդագրություն
+                            </label>
+
+
+                            <textarea
+                                id="orderNote"
+                                name="orderNote"
+                                rows="4"
+                                placeholder="Օր․՝ խնդրում եմ զանգահարել առաքումից առաջ..."
+                            ></textarea>
+
+                        </div>
+
+                    </section>
+
+
                 </div>
 
-                <div>
 
-                    <h3>
-                        Այլ վճարման համակարգ
-                    </h3>
 
-                    <p>
-                        Ընտրեք հասանելի վճարման տարբերակը
-                    </p>
+                <!-- =========================================
+                     RIGHT COLUMN
+                ========================================== -->
+
+                <div class="col-lg-5">
+
+
+                    <aside class="order-summary">
+
+
+                        <div class="summary-header">
+
+                            <div>
+
+                                <span>
+                                    Պատվերի ամփոփում
+                                </span>
+
+                                <h2>
+                                    Ձեր պատվերը
+                                </h2>
+
+                            </div>
+
+
+                            <div class="summary-bag">
+
+                                <i class="bi bi-bag-heart"></i>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CART ITEMS -->
+
+                        <div
+                            id="checkoutItems"
+                            class="checkout-items"
+                        >
+
+                            <!-- checkout.js-ը կտեղադրի ապրանքները -->
+
+                        </div>
+
+
+
+                        <!-- TOTALS -->
+
+                        <div class="summary-totals">
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Ապրանքներ
+                                </span>
+
+                                <strong id="checkoutSubtotal">
+                                    0 ֏
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Առաքում
+                                </span>
+
+                                <strong id="deliveryPrice">
+                                    Կհաշվարկվի
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-divider"></div>
+
+
+                            <div class="summary-total">
+
+                                <span>
+                                    Ընդհանուր
+                                </span>
+
+                                <strong id="checkoutTotal">
+                                    0 ֏
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- SECURITY -->
+
+                        <div class="order-security">
+
+                            <div class="security-icon">
+
+                                <i class="bi bi-shield-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Անվտանգ պատվեր
+                                </strong>
+
+                                <p>
+                                    Ձեր տվյալներն օգտագործվում են միայն պատվերի մշակման համար։
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button
+                            type="submit"
+                            class="checkout-submit"
+                            id="submitOrder"
+                        >
+
+                            <span>
+                                Հաստատել պատվերը
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+
+
+                        <!-- BACK -->
+
+                        <a
+                            href="cart.html"
+                            class="back-to-cart"
+                        >
+
+                            <i class="bi bi-arrow-left"></i>
+
+                            Վերադառնալ զամբյուղ
+
+                        </a>
+
+
+                    </aside>
 
                 </div>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     CONTACT CTA
+========================================================= -->
+
+<section class="checkout-contact">
+
+    <div class="container">
+
+        <div class="checkout-contact-inner">
+
+
+            <div>
+
+                <span>
+                    Հարցեր ունե՞ք
+                </span>
+
+                <h2>
+                    Մենք սիրով կօգնենք Ձեզ
+                </h2>
 
             </div>
 
 
-            <div class="other-payment-select">
+            <div class="contact-buttons">
 
-                <label for="otherPaymentMethod">
-                    Վճարման համակարգ
-                </label>
 
-                <select
-                    id="otherPaymentMethod"
-                    name="otherPaymentMethod"
+                <a
+                    href="tel:+37494631200"
+                    class="contact-btn phone"
                 >
 
-                    <option value="">
-                        Ընտրեք տարբերակը
-                    </option>
+                    <i class="bi bi-telephone"></i>
 
-                    <option value="telcell">
-                        Telcell
-                    </option>
+                    Զանգահարել
 
-                    <option value="easypay">
-                        EasyPay
-                    </option>
-
-                    <option value="other">
-                        Այլ
-                    </option>
-
-                </select>
-
-            </div>
+                </a>
 
 
-            <div class="receipt-upload">
-
-                <label for="otherReceipt">
-
-                    <i class="bi bi-paperclip"></i>
-
-                    <span>
-
-                        <strong>
-                            Վճարման կտրոն
-                        </strong>
-
-                        <small>
-                            Կցեք կատարված վճարման կտրոնը
-                        </small>
-
-                    </span>
-
-                </label>
-
-                <input
-                    type="file"
-                    id="otherReceipt"
-                    name="otherReceipt"
-                    accept="image/jpeg,image/png,application/pdf"
+                <a
+                    href="https://wa.me/37494631200"
+                    target="_blank"
+                    rel="noopener"
+                    class="contact-btn whatsapp"
                 >
+
+                    <i class="bi bi-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
 
             </div>
 
@@ -652,4 +1290,55 @@
     </div>
 
 </section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Բոլոր իրավունքները պաշտպանված են։
+            </p>
+
+
+            <a href="index.html">
+                Գլխավոր էջ
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/products-data.js"></script>
+
+<script src="js/header.js"></script>
+
+<script src="js/checkout.js"></script>
+
+
+<!-- BOOTSTRAP -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+</body>
+
+</html>
 
