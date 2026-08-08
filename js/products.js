@@ -1,4 +1,4 @@
-```javascript
+
 const productContainer = document.getElementById("productContainer");
 
 function formatPrice(price) {
@@ -186,4 +186,3 @@ document.addEventListener("click", function(event) {
    ========================================== */
 
 displayProducts(products);
-```
