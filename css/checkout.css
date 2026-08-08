@@ -2269,7 +2269,7 @@ RESPONSIVE
     line-height:
         1.5;
 }
-```
+
 
 }
 
@@ -2279,7 +2279,7 @@ VERY SMALL DEVICES
 
 @media (max-width: 380px) {
 
-```
+
 .checkout-card {
 
     padding:
@@ -2363,6 +2363,137 @@ VERY SMALL DEVICES
     font-size:
         11px;
 }
+
+}
+/* =========================================================
+RIBBON TEXT
+========================================================= */
+
+.ribbon-card {
+position: relative;
+}
+
+.optional-label {
+margin-left: 7px;
+color: var(--checkout-muted) !important;
+font-size: 11px;
+font-weight: 500;
+}
+
+.ribbon-input-wrapper {
+position: relative;
+}
+
+.ribbon-input-wrapper > i {
+position: absolute;
+left: 16px;
+top: 17px;
+color: var(--checkout-green);
+font-size: 18px;
+pointer-events: none;
+z-index: 2;
+}
+
+.ribbon-input-wrapper textarea {
+width: 100%;
+min-height: 105px;
+padding: 15px 17px 15px 47px;
+
+```
+border: 1px solid var(--checkout-border);
+border-radius: 13px;
+
+background: #fcfbf9;
+color: var(--checkout-text);
+
+font-family: "Montserrat", sans-serif;
+font-size: 14px;
+line-height: 1.6;
+
+resize: vertical;
+outline: none;
+
+transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 ```
 
 }
+
+.ribbon-input-wrapper textarea::placeholder {
+color: #aaa;
+}
+
+.ribbon-input-wrapper textarea:focus {
+border-color: var(--checkout-green);
+
+```
+background: #ffffff;
+
+box-shadow:
+    0 0 0 4px
+    rgba(62, 107, 85, 0.08);
+```
+
+}
+
+.ribbon-help {
+display: flex;
+align-items: flex-start;
+gap: 8px;
+
+```
+margin-top: 10px;
+
+color: var(--checkout-muted);
+
+font-size: 11px;
+line-height: 1.6;
+```
+
+}
+
+.ribbon-help i {
+flex-shrink: 0;
+margin-top: 2px;
+
+
+color: var(--checkout-green);
+font-size: 14px;
+
+
+}
+
+.ribbon-counter {
+margin-top: 6px;
+
+
+text-align: right;
+
+color: #999;
+font-size: 10px;
+
+
+}
+
+.ribbon-counter span {
+color: var(--checkout-green-dark);
+font-weight: 700;
+}
+
+@media (max-width: 576px) {
+
+
+.ribbon-input-wrapper textarea {
+    min-height: 110px;
+    padding-left: 45px;
+}
+
+.ribbon-help {
+    font-size: 10px;
+}
+
+
+}
+
