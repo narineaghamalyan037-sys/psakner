@@ -1,0 +1,853 @@
+/* ==================================================
+DELIVERY PAGE
+«ՊՍԱԿՆԵՐ» — Առաքում և վճարում
+================================================== */
+
+/* ==================================================
+VARIABLES
+================================================== */
+
+:root {
+
+
+--delivery-green: #1f4d3a;
+--delivery-green-dark: #16382b;
+--delivery-green-light: #e8f0eb;
+
+--delivery-beige: #f4eadc;
+--delivery-beige-light: #faf6ef;
+
+--delivery-white: #ffffff;
+
+--delivery-text: #2f3a34;
+--delivery-text-light: #6c756f;
+
+--delivery-shadow:
+    0 12px 35px rgba(31, 77, 58, 0.12);
+
+
+}
+
+/* ==================================================
+GENERAL
+================================================== */
+
+.section-padding {
+
+
+padding: 90px 0;
+
+
+}
+
+.delivery-steps,
+.delivery-info,
+.payment-section,
+.faq-section {
+
+
+overflow: hidden;
+
+
+}
+
+.section-title {
+
+
+max-width: 750px;
+
+margin: 0 auto 50px;
+
+
+}
+
+.section-title span {
+
+
+display: inline-block;
+
+margin-bottom: 12px;
+
+color: var(--delivery-green);
+
+font-size: .82rem;
+
+font-weight: 800;
+
+letter-spacing: 2px;
+
+
+}
+
+.section-title h2 {
+
+
+margin-bottom: 20px;
+
+color: var(--delivery-green-dark);
+
+font-size: clamp(2rem,4vw,3rem);
+
+font-weight: 800;
+
+
+}
+
+.section-title p {
+
+
+color: var(--delivery-text-light);
+
+line-height: 1.8;
+
+font-size: 1.05rem;
+
+
+}
+
+/* ==================================================
+HERO
+================================================== */
+
+.delivery-hero {
+
+
+position: relative;
+
+padding: 120px 0 110px;
+
+color: var(--delivery-white);
+
+background:
+    linear-gradient(
+        135deg,
+        rgba(22,56,43,.96),
+        rgba(31,77,58,.9)
+    );
+
+overflow: hidden;
+
+
+}
+
+.delivery-hero::before {
+
+
+content: "";
+
+position: absolute;
+
+width: 350px;
+
+height: 350px;
+
+left: -150px;
+
+top: -150px;
+
+background:
+    rgba(255,255,255,.06);
+
+border-radius: 50%;
+
+
+}
+
+.delivery-hero::after {
+
+
+content: "";
+
+position: absolute;
+
+width: 400px;
+
+height: 400px;
+
+right: -160px;
+
+bottom: -220px;
+
+background:
+    rgba(244,234,220,.1);
+
+border-radius:50%;
+
+
+}
+
+.delivery-hero .container {
+
+
+position: relative;
+
+z-index: 2;
+
+
+}
+
+.delivery-label {
+
+
+color: var(--delivery-beige);
+
+font-weight: 800;
+
+letter-spacing: 2px;
+
+font-size: .85rem;
+
+
+}
+
+.delivery-hero h1 {
+
+
+margin: 20px 0;
+
+font-size: clamp(2.8rem,6vw,4.5rem);
+
+font-weight: 900;
+
+
+}
+
+.delivery-hero p {
+
+
+max-width: 700px;
+
+margin:auto;
+
+color: rgba(255,255,255,.85);
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+
+}
+
+/* ==================================================
+ORDER STEPS
+================================================== */
+
+.delivery-steps {
+
+
+background: var(--delivery-white);
+
+
+}
+
+.step-card {
+
+
+position:relative;
+
+height:100%;
+
+padding:35px 25px;
+
+text-align:center;
+
+background:white;
+
+border-radius:22px;
+
+border:
+    1px solid rgba(31,77,58,.08);
+
+box-shadow:
+    0 8px 25px rgba(31,77,58,.07);
+
+transition:.35s ease;
+
+
+}
+
+.step-card:hover {
+
+
+transform:translateY(-8px);
+
+box-shadow:var(--delivery-shadow);
+
+
+}
+
+.step-number {
+
+
+position:absolute;
+
+top:15px;
+
+right:20px;
+
+width:35px;
+
+height:35px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+color:white;
+
+background:
+    var(--delivery-green);
+
+border-radius:50%;
+
+font-weight:800;
+
+
+}
+
+.step-icon {
+
+
+width:75px;
+
+height:75px;
+
+margin:20px auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:var(--delivery-green);
+
+background:var(--delivery-beige);
+
+border-radius:50%;
+
+font-size:2rem;
+
+}
+
+.step-card h3 {
+
+
+color:var(--delivery-green-dark);
+
+font-size:1.3rem;
+
+font-weight:800;
+
+
+}
+
+.step-card p {
+
+
+color:var(--delivery-text-light);
+
+line-height:1.7;
+
+
+}
+
+/* ==================================================
+DELIVERY INFO
+================================================== */
+
+.delivery-info {
+
+
+background:
+    var(--delivery-beige);
+
+
+}
+
+.delivery-info-card {
+
+
+height:100%;
+
+padding:35px 25px;
+
+text-align:center;
+
+background:white;
+
+border-radius:22px;
+
+box-shadow:
+    0 10px 30px rgba(31,77,58,.08);
+
+
+}
+
+.info-icon {
+
+
+width:70px;
+
+height:70px;
+
+margin:0 auto 20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+background:
+    var(--delivery-green);
+
+border-radius:50%;
+
+font-size:1.8rem;
+
+
+}
+
+.delivery-info-card h3 {
+
+
+color:
+    var(--delivery-green-dark);
+
+font-weight:800;
+
+margin-bottom:15px;
+
+
+}
+
+.delivery-info-card p {
+
+
+color:
+    var(--delivery-text-light);
+
+line-height:1.7;
+
+
+}
+
+.delivery-info-card small {
+
+
+color:
+    var(--delivery-green);
+
+font-weight:700;
+
+
+}
+
+/* ==================================================
+PAYMENT
+================================================== */
+
+.payment-section {
+
+
+background:white;
+
+
+}
+
+.payment-section h2 {
+
+
+color:
+    var(--delivery-green-dark);
+
+font-size:2.5rem;
+
+font-weight:800;
+
+
+}
+
+.payment-section > p {
+
+color:
+    var(--delivery-text-light);
+
+
+}
+
+.payment-item {
+
+
+display:flex;
+
+gap:20px;
+
+margin-top:30px;
+
+
+}
+
+.payment-item i {
+
+
+flex-shrink:0;
+
+width:55px;
+
+height:55px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+background:
+    var(--delivery-green);
+
+border-radius:50%;
+
+font-size:1.4rem;
+
+
+}
+
+.payment-item h4 {
+
+
+margin-bottom:5px;
+
+color:
+    var(--delivery-green-dark);
+
+font-weight:800;
+
+
+}
+
+.payment-item p {
+
+
+color:
+    var(--delivery-text-light);
+
+
+}
+
+.delivery-note {
+
+
+padding:45px;
+
+background:
+    var(--delivery-green);
+
+color:white;
+
+border-radius:25px;
+
+box-shadow:
+    var(--delivery-shadow);
+
+
+}
+
+.note-icon {
+
+
+width:65px;
+
+height:65px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+margin-bottom:20px;
+
+background:
+    var(--delivery-beige);
+
+color:
+    var(--delivery-green);
+
+border-radius:50%;
+
+font-size:1.8rem;
+
+
+}
+
+.delivery-note h3 {
+
+
+color:white;
+
+font-weight:800;
+
+
+}
+
+.delivery-note p {
+
+
+color:rgba(255,255,255,.85);
+
+line-height:1.8;
+
+
+}
+
+/* ==================================================
+FAQ
+================================================== */
+
+.faq-section {
+
+
+background:
+    var(--delivery-beige-light);
+
+
+}
+
+.accordion-item {
+
+
+margin-bottom:15px;
+
+border:none;
+
+border-radius:15px!important;
+
+overflow:hidden;
+
+box-shadow:
+    0 5px 20px rgba(31,77,58,.06);
+
+
+}
+
+.accordion-button {
+
+
+padding:20px;
+
+color:
+    var(--delivery-green-dark);
+
+font-weight:800;
+
+background:white;
+
+
+}
+
+.accordion-button:not(.collapsed) {
+
+
+color:white;
+
+background:
+    var(--delivery-green);
+
+
+}
+
+.accordion-body {
+
+
+padding:25px;
+
+color:
+    var(--delivery-text-light);
+
+background:white;
+
+line-height:1.8;
+
+
+}
+
+/* ==================================================
+CONTACT CTA
+================================================== */
+
+.delivery-contact {
+
+
+padding:80px 0;
+
+text-align:center;
+
+color:white;
+
+background:
+    var(--delivery-green-dark);
+
+
+}
+
+.delivery-contact > i {
+
+
+font-size:3rem;
+
+color:
+    var(--delivery-beige);
+
+
+}
+
+.delivery-contact h2 {
+
+
+margin:20px 0;
+
+font-weight:900;
+
+
+}
+
+.delivery-contact p {
+
+
+color:rgba(255,255,255,.8);
+
+
+}
+
+.delivery-contact-btn {
+
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-top:20px;
+
+padding:14px 30px;
+
+color:
+    var(--delivery-green-dark);
+
+background:
+    var(--delivery-beige);
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:800;
+
+transition:.3s ease;
+
+
+}
+
+.delivery-contact-btn:hover {
+
+
+transform:translateY(-4px);
+
+background:white;
+
+
+}
+
+/* ==================================================
+TABLET
+================================================== */
+
+@media(max-width:991px){
+
+
+.section-padding{
+
+    padding:70px 0;
+
+}
+
+
+.delivery-note{
+
+    padding:35px;
+
+}
+
+
+}
+
+/* ==================================================
+MOBILE
+================================================== */
+
+@media(max-width:575px){
+
+
+.delivery-hero{
+
+    padding:80px 0;
+
+}
+
+
+.delivery-hero h1{
+
+    font-size:2.5rem;
+
+}
+
+
+.section-title h2{
+
+    font-size:1.9rem;
+
+}
+
+
+.step-card,
+.delivery-info-card{
+
+    padding:30px 20px;
+
+}
+
+
+.delivery-note{
+
+    padding:30px 20px;
+
+    border-radius:20px;
+
+}
+
+
+.payment-item{
+
+    gap:15px;
+
+}
+
+
+.delivery-contact{
+
+    padding:60px 20px;
+
+}
+
+
+}

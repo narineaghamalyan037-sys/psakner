@@ -1,0 +1,187 @@
+/* =========================
+      FOOTER
+========================= */
+
+
+.main-footer {
+
+    background:#1f4d3a;
+
+    color:white;
+
+    padding:60px 0 20px;
+
+}
+
+
+
+.footer-logo {
+
+    font-family:"Playfair Display", serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.footer-text {
+
+    color:#eee;
+
+    line-height:1.8;
+
+}
+
+
+
+.footer-title {
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+    color:#f5e6d3;
+
+    font-weight:700;
+
+}
+
+
+
+.footer-links {
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+
+
+.footer-links li {
+
+    margin-bottom:12px;
+
+}
+
+
+
+.footer-links a {
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.footer-links a:hover {
+
+    color:#d9b98b;
+
+    padding-left:5px;
+
+}
+
+
+
+/* CONTACT */
+
+.footer-contact i {
+
+    color:#d9b98b;
+
+    margin-right:10px;
+
+}
+
+
+
+.footer-contact p {
+
+    margin-bottom:12px;
+
+}
+
+
+
+/* SOCIAL ICONS */
+
+
+.footer-social a {
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    width:40px;
+
+    height:40px;
+
+
+    background:white;
+
+    color:#1f4d3a;
+
+
+    border-radius:50%;
+
+
+    margin-right:8px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.footer-social a:hover {
+
+
+    background:#d9b98b;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+/* COPYRIGHT */
+
+
+.footer-bottom {
+
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+
+    margin-top:40px;
+
+
+    padding-top:20px;
+
+
+    text-align:center;
+
+
+    color:#eee;
+
+
+}
