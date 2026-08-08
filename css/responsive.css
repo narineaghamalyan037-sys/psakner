@@ -127,3 +127,14 @@ font-size:15px;
 }
 
 }
+@media (max-width: 576px) {
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .product-actions .order-btn {
+        width: 100%;
+    }
+
+}
