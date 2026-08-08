@@ -12,25 +12,36 @@
 
     <meta
         name="description"
-        content="Ծաղկեպսակների պատվերի ձևակերպում և առաքման տվյալներ"
+        content="Պատվերի ձևակերպում և առաքման տվյալներ"
     >
 
     <title>Պատվերի ձևակերպում | Ծաղկեպսակներ</title>
 
 
-    <!-- Bootstrap -->
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Bootstrap Icons -->
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
 
-    <!-- Google Fonts -->
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -43,17 +54,25 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Main CSS -->
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="css/style.css"
     >
 
-    <!-- Checkout CSS -->
+
+    <!-- =====================================================
+         CHECKOUT CSS
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="css/checkout.css"
@@ -65,9 +84,9 @@
 <body>
 
 
-<!-- =====================================================
-HEADER
-===================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="main-header">
 
@@ -159,7 +178,6 @@ HEADER
 
             </a>
 
-
         </div>
 
     </div>
@@ -167,9 +185,9 @@ HEADER
 </header>
 
 
-<!-- =====================================================
-CHECKOUT HERO
-===================================================== -->
+<!-- =========================================================
+     CHECKOUT HERO
+========================================================= -->
 
 <section class="checkout-hero">
 
@@ -177,14 +195,13 @@ CHECKOUT HERO
 
         <div class="checkout-hero-inner">
 
+            <div>
 
-            <div class="checkout-hero-text">
-
-                <span class="checkout-label">
+                <span class="checkout-kicker">
 
                     <i class="bi bi-flower1"></i>
 
-                    Պատվերի ձևակերպում
+                    ՊԱՏՎԵՐԻ ՁԵՎԱԿԵՐՊՈՒՄ
 
                 </span>
 
@@ -192,28 +209,20 @@ CHECKOUT HERO
                 <h1>
 
                     Ձեր պատվերը՝
-                    <span>մեկ գեղեցիկ քայլ հեռավորության վրա</span>
+                    <span>մեկ քայլ հեռավորության վրա</span>
 
                 </h1>
 
 
                 <p>
 
-                    Լրացրեք անհրաժեշտ տվյալները,
-                    ընտրեք առաքման և վճարման տարբերակը,
-                    իսկ մնացածը մենք կհոգանք։
+                    Լրացրեք անհրաժեշտ տվյալները։
+                    Մենք կապ կհաստատենք Ձեզ հետ
+                    պատվերը վերջնական հաստատելու համար։
 
                 </p>
 
             </div>
-
-
-            <div class="checkout-hero-icon">
-
-                <i class="bi bi-bag-heart"></i>
-
-            </div>
-
 
         </div>
 
@@ -222,34 +231,30 @@ CHECKOUT HERO
 </section>
 
 
-<!-- =====================================================
-CHECKOUT MAIN
-===================================================== -->
+<!-- =========================================================
+     CHECKOUT
+========================================================= -->
 
 <main class="checkout-page">
 
     <div class="container">
 
 
-        <!-- TOP PROGRESS -->
+        <!-- =================================================
+             PROGRESS
+        ================================================== -->
 
         <div class="checkout-progress">
 
-            <div class="progress-item active">
+            <div class="progress-item completed">
 
-                <span>
-                    01
+                <span class="progress-number">
+                    <i class="bi bi-check-lg"></i>
                 </span>
 
-                <div>
-                    <strong>
-                        Տվյալներ
-                    </strong>
-
-                    <small>
-                        Առաքում և կապ
-                    </small>
-                </div>
+                <span>
+                    Զամբյուղ
+                </span>
 
             </div>
 
@@ -257,21 +262,15 @@ CHECKOUT MAIN
             <div class="progress-line active"></div>
 
 
-            <div class="progress-item">
+            <div class="progress-item current">
 
-                <span>
-                    02
+                <span class="progress-number">
+                    2
                 </span>
 
-                <div>
-                    <strong>
-                        Վճարում
-                    </strong>
-
-                    <small>
-                        Ընտրեք եղանակը
-                    </small>
-                </div>
+                <span>
+                    Տվյալներ
+                </span>
 
             </div>
 
@@ -281,43 +280,41 @@ CHECKOUT MAIN
 
             <div class="progress-item">
 
-                <span>
-                    03
+                <span class="progress-number">
+                    3
                 </span>
 
-                <div>
-                    <strong>
-                        Հաստատում
-                    </strong>
-
-                    <small>
-                        Ավարտել պատվերը
-                    </small>
-                </div>
+                <span>
+                    Հաստատում
+                </span>
 
             </div>
 
         </div>
 
 
-        <!-- FORM -->
+        <!-- =================================================
+             FORM
+        ================================================== -->
 
         <form
             id="checkoutForm"
             class="checkout-form"
         >
 
-            <div class="row g-4">
+            <div class="checkout-layout">
 
 
                 <!-- =================================================
-                LEFT COLUMN
-                ================================================= -->
+                     LEFT COLUMN
+                ================================================== -->
 
-                <div class="col-lg-7">
+                <div class="checkout-main">
 
 
-                    <!-- CUSTOMER -->
+                    <!-- =============================================
+                         CUSTOMER DATA
+                    ============================================== -->
 
                     <section class="checkout-section">
 
@@ -330,28 +327,36 @@ CHECKOUT MAIN
                             <div>
 
                                 <span class="section-label">
-                                    Պատվիրատու
+                                    ՊԱՏՎԻՐԱՏՈՒ
                                 </span>
 
                                 <h2>
                                     Ձեր տվյալները
                                 </h2>
 
+                                <p>
+                                    Անհրաժեշտ է պատվերը հաստատելու և
+                                    առաքման հետ կապվելու համար։
+                                </p>
+
                             </div>
 
                         </div>
 
 
-                        <div class="checkout-grid">
+                        <div class="form-grid">
 
 
                             <!-- NAME -->
 
-                            <div class="checkout-field full">
+                            <div class="form-field full">
 
                                 <label for="fullName">
+
                                     Անուն, ազգանուն
-                                    <b>*</b>
+
+                                    <span>*</span>
+
                                 </label>
 
                                 <div class="field-control">
@@ -374,11 +379,14 @@ CHECKOUT MAIN
 
                             <!-- PHONE -->
 
-                            <div class="checkout-field">
+                            <div class="form-field">
 
                                 <label for="phone">
+
                                     Հեռախոսահամար
-                                    <b>*</b>
+
+                                    <span>*</span>
+
                                 </label>
 
                                 <div class="field-control">
@@ -401,10 +409,12 @@ CHECKOUT MAIN
 
                             <!-- EMAIL -->
 
-                            <div class="checkout-field">
+                            <div class="form-field">
 
                                 <label for="email">
+
                                     Էլ․ փոստ
+
                                 </label>
 
                                 <div class="field-control">
@@ -423,12 +433,15 @@ CHECKOUT MAIN
 
                             </div>
 
+
                         </div>
 
                     </section>
 
 
-                    <!-- DELIVERY -->
+                    <!-- =============================================
+                         DELIVERY
+                    ============================================== -->
 
                     <section class="checkout-section">
 
@@ -441,28 +454,35 @@ CHECKOUT MAIN
                             <div>
 
                                 <span class="section-label">
-                                    Առաքում
+                                    ԱՌԱՔՈՒՄ
                                 </span>
 
                                 <h2>
-                                    Որտե՞ղ և ե՞րբ
+                                    Որտե՞ղ և ե՞րբ առաքել
                                 </h2>
+
+                                <p>
+                                    Նշեք առաքման հասցեն և նախընտրելի ժամը։
+                                </p>
 
                             </div>
 
                         </div>
 
 
-                        <div class="checkout-grid">
+                        <div class="form-grid">
 
 
                             <!-- CITY -->
 
-                            <div class="checkout-field">
+                            <div class="form-field">
 
                                 <label for="city">
+
                                     Քաղաք / բնակավայր
-                                    <b>*</b>
+
+                                    <span>*</span>
+
                                 </label>
 
                                 <div class="field-control">
@@ -484,11 +504,14 @@ CHECKOUT MAIN
 
                             <!-- ADDRESS -->
 
-                            <div class="checkout-field">
+                            <div class="form-field">
 
                                 <label for="address">
+
                                     Առաքման հասցե
-                                    <b>*</b>
+
+                                    <span>*</span>
+
                                 </label>
 
                                 <div class="field-control">
@@ -511,10 +534,12 @@ CHECKOUT MAIN
 
                             <!-- DATE -->
 
-                            <div class="checkout-field">
+                            <div class="form-field">
 
                                 <label for="deliveryDate">
+
                                     Առաքման օր
+
                                 </label>
 
                                 <div class="field-control">
@@ -534,10 +559,12 @@ CHECKOUT MAIN
 
                             <!-- TIME -->
 
-                            <div class="checkout-field">
+                            <div class="form-field">
 
                                 <label for="deliveryTime">
+
                                     Նախընտրելի ժամ
+
                                 </label>
 
                                 <div class="field-control">
@@ -581,27 +608,39 @@ CHECKOUT MAIN
                     </section>
 
 
-                    <!-- RIBBON MESSAGE -->
+                    <!-- =============================================
+                         RIBBON MESSAGE
+                    ============================================== -->
 
                     <section class="ribbon-section">
+
+                        <div class="ribbon-decoration">
+
+                            <span></span>
+
+                            <i class="bi bi-stars"></i>
+
+                            <span></span>
+
+                        </div>
 
 
                         <div class="ribbon-header">
 
                             <div class="ribbon-icon">
 
-                                <i class="bi bi-stars"></i>
+                                <i class="bi bi-gift"></i>
 
                             </div>
 
                             <div>
 
-                                <span>
-                                    Հատուկ ցանկություն
+                                <span class="section-label">
+                                    ՀԱՏՈՒԿ ՊԱՏՎԵՐ
                                 </span>
 
                                 <h2>
-                                    Գրություն ծաղկեպսակի ժապավենի վրա
+                                    Ի՞նչ գրել ծաղկեպսակի լենտայի վրա։
                                 </h2>
 
                             </div>
@@ -609,78 +648,56 @@ CHECKOUT MAIN
                         </div>
 
 
-                        <div class="ribbon-content">
+                        <p class="ribbon-description">
+
+                            Գրեք այն տեքստը, որը ցանկանում եք տեսնել
+                            լենտայի վրա։ Եթե դաշտը դատարկ թողնեք,
+                            լենտա չի ավելացվի։
+
+                        </p>
 
 
-                            <div class="ribbon-preview">
+                        <div class="ribbon-input-wrapper">
 
-                                <div class="ribbon-decoration left">
-                                    <i class="bi bi-flower1"></i>
-                                </div>
-
-
-                                <div class="ribbon-middle">
-
-                                    <small>
-                                        ԺԱՊԱՎԵՆԻ ԳՐՈՒԹՅՈՒՆ
-                                    </small>
-
-                                    <strong id="ribbonPreviewText">
-                                        Ձեր գրությունը
-                                    </strong>
-
-                                </div>
+                            <textarea
+                                id="ribbonText"
+                                name="ribbonText"
+                                rows="3"
+                                maxlength="100"
+                                placeholder="Օր․՝ Սիրելի մայրիկին՝ հավերժ սիրով..."
+                            ></textarea>
 
 
-                                <div class="ribbon-decoration right">
-                                    <i class="bi bi-flower1"></i>
-                                </div>
+                            <div class="ribbon-input-footer">
 
-                            </div>
-
-
-                            <div class="checkout-field">
-
-                                <label for="ribbonText">
-
-                                    Ի՞նչ գրել ժապավենի վրա
-
-                                    <span>
-                                        (ըստ ցանկության)
-                                    </span>
-
-                                </label>
-
-
-                                <div class="field-control ribbon-input">
+                                <span>
 
                                     <i class="bi bi-pencil"></i>
 
-                                    <input
-                                        type="text"
-                                        id="ribbonText"
-                                        name="ribbonText"
-                                        maxlength="80"
-                                        placeholder="Օր․՝ Հավերժ հիշատակ"
-                                    >
+                                    Լենտայի գրություն
 
-                                    <span
-                                        class="character-count"
-                                        id="ribbonCount"
-                                    >
-                                        0/80
-                                    </span>
+                                </span>
 
-                                </div>
+                                <span id="ribbonCounter">
+                                    0 / 100
+                                </span>
+
+                            </div>
+
+                        </div>
 
 
-                                <p class="field-hint">
+                        <div class="ribbon-preview">
 
-                                    <i class="bi bi-info-circle"></i>
+                            <span class="preview-label">
+                                Նախադիտում
+                            </span>
 
-                                    Գրությունը կպատրաստվի պատվերի հաստատումից հետո։
+                            <div class="ribbon-preview-belt">
 
-                                </p>
+                                <span id="ribbonPreview">
+                                    Ձեր գրությունը
+                                </span>
 
                             </div>
 
@@ -689,7 +706,9 @@ CHECKOUT MAIN
                     </section>
 
 
-                    <!-- PAYMENT -->
+                    <!-- =============================================
+                         PAYMENT
+                    ============================================== -->
 
                     <section class="checkout-section">
 
@@ -702,12 +721,16 @@ CHECKOUT MAIN
                             <div>
 
                                 <span class="section-label">
-                                    Վճարում
+                                    ՎՃԱՐՈՒՄ
                                 </span>
 
                                 <h2>
                                     Ընտրեք վճարման եղանակը
                                 </h2>
+
+                                <p>
+                                    Ընտրեք Ձեզ առավել հարմար տարբերակը։
+                                </p>
 
                             </div>
 
@@ -741,13 +764,13 @@ CHECKOUT MAIN
                                         </strong>
 
                                         <small>
-                                            Վճարում պատվերը ստանալիս
+                                            Վճարում առաքման ժամանակ
                                         </small>
 
                                     </span>
 
-                                    <span class="payment-selected">
-                                        <i class="bi bi-check-lg"></i>
+                                    <span class="payment-radio">
+                                        <i class="bi bi-check"></i>
                                     </span>
 
                                 </span>
@@ -783,8 +806,8 @@ CHECKOUT MAIN
 
                                     </span>
 
-                                    <span class="payment-selected">
-                                        <i class="bi bi-check-lg"></i>
+                                    <span class="payment-radio">
+                                        <i class="bi bi-check"></i>
                                     </span>
 
                                 </span>
@@ -820,8 +843,8 @@ CHECKOUT MAIN
 
                                     </span>
 
-                                    <span class="payment-selected">
-                                        <i class="bi bi-check-lg"></i>
+                                    <span class="payment-radio">
+                                        <i class="bi bi-check"></i>
                                     </span>
 
                                 </span>
@@ -834,11 +857,13 @@ CHECKOUT MAIN
                     </section>
 
 
-                    <!-- NOTE -->
+                    <!-- =============================================
+                         NOTE
+                    ============================================== -->
 
                     <section class="checkout-section">
 
-                        <div class="section-top">
+                        <div class="section-top compact">
 
                             <div class="section-number">
                                 04
@@ -847,11 +872,11 @@ CHECKOUT MAIN
                             <div>
 
                                 <span class="section-label">
-                                    Լրացուցիչ
+                                    ԼՐԱՑՈՒՑԻՉ
                                 </span>
 
                                 <h2>
-                                    Հաղորդագրություն
+                                    Կա՞ որևէ հատուկ ցանկություն։
                                 </h2>
 
                             </div>
@@ -859,16 +884,18 @@ CHECKOUT MAIN
                         </div>
 
 
-                        <div class="checkout-field">
+                        <div class="form-field">
 
                             <label for="orderNote">
-                                Լրացուցիչ տեղեկություն
+
+                                Լրացուցիչ հաղորդագրություն
+
                             </label>
 
                             <textarea
                                 id="orderNote"
                                 name="orderNote"
-                                rows="5"
+                                rows="4"
                                 placeholder="Օր․՝ խնդրում եմ զանգահարել առաքումից առաջ..."
                             ></textarea>
 
@@ -881,32 +908,31 @@ CHECKOUT MAIN
 
 
                 <!-- =================================================
-                RIGHT COLUMN
-                ================================================= -->
+                     RIGHT COLUMN — ORDER SUMMARY
+                ================================================== -->
 
-                <div class="col-lg-5">
+                <aside class="checkout-sidebar">
+
+                    <div class="summary-card">
 
 
-                    <aside class="order-panel">
+                        <!-- HEADER -->
 
-
-                        <!-- PANEL HEADER -->
-
-                        <div class="order-panel-header">
+                        <div class="summary-top">
 
                             <div>
 
                                 <span>
-                                    Ձեր ընտրությունը
+                                    ՊԱՏՎԵՐ
                                 </span>
 
                                 <h2>
-                                    Պատվերի ամփոփում
+                                    Ձեր ընտրածը
                                 </h2>
 
                             </div>
 
-                            <div class="order-bag">
+                            <div class="summary-icon">
 
                                 <i class="bi bi-bag-heart"></i>
 
@@ -922,20 +948,20 @@ CHECKOUT MAIN
                             class="checkout-items"
                         >
 
-                            <!-- JS -->
+                            <!-- Cart JS -->
 
                         </div>
 
 
-                        <!-- TOTAL -->
+                        <!-- TOTALS -->
 
-                        <div class="order-total">
+                        <div class="summary-calculation">
 
 
-                            <div class="total-row">
+                            <div class="summary-row">
 
                                 <span>
-                                    Ապրանքների արժեք
+                                    Ապրանքներ
                                 </span>
 
                                 <strong id="checkoutSubtotal">
@@ -945,7 +971,7 @@ CHECKOUT MAIN
                             </div>
 
 
-                            <div class="total-row">
+                            <div class="summary-row">
 
                                 <span>
                                     Առաքում
@@ -958,10 +984,10 @@ CHECKOUT MAIN
                             </div>
 
 
-                            <div class="total-line"></div>
+                            <div class="summary-separator"></div>
 
 
-                            <div class="grand-total">
+                            <div class="summary-total">
 
                                 <span>
                                     Ընդհանուր
@@ -977,28 +1003,16 @@ CHECKOUT MAIN
                         </div>
 
 
-                        <!-- TRUST -->
+                        <!-- SECURITY -->
 
-                        <div class="trust-box">
+                        <div class="summary-note">
 
-                            <div class="trust-icon">
+                            <i class="bi bi-shield-check"></i>
 
-                                <i class="bi bi-shield-check"></i>
-
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Անվտանգ պատվեր
-                                </strong>
-
-                                <p>
-                                    Ձեր տվյալները օգտագործվում են
-                                    միայն պատվերի մշակման նպատակով։
-                                </p>
-
-                            </div>
+                            <span>
+                                Ձեր տվյալները օգտագործվում են
+                                միայն պատվերի մշակման համար։
+                            </span>
 
                         </div>
 
@@ -1020,9 +1034,11 @@ CHECKOUT MAIN
                         </button>
 
 
+                        <!-- BACK -->
+
                         <a
                             href="cart.html"
-                            class="return-cart"
+                            class="summary-back"
                         >
 
                             <i class="bi bi-arrow-left"></i>
@@ -1032,9 +1048,35 @@ CHECKOUT MAIN
                         </a>
 
 
-                    </aside>
+                    </div>
 
-                </div>
+
+                    <!-- CONTACT -->
+
+                    <div class="sidebar-contact">
+
+                        <span>
+                            ՕԳՆՈՒԹՅՈՒՆ
+                        </span>
+
+                        <h3>
+                            Հարց ունե՞ք պատվերի մասին։
+                        </h3>
+
+                        <a
+                            href="tel:+37494631200"
+                        >
+
+                            <i class="bi bi-telephone"></i>
+
+                            +374 94 63 12 00
+
+                        </a>
+
+                    </div>
+
+                </aside>
+
 
             </div>
 
@@ -1045,9 +1087,9 @@ CHECKOUT MAIN
 </main>
 
 
-<!-- =====================================================
-CONTACT
-===================================================== -->
+<!-- =========================================================
+     CONTACT CTA
+========================================================= -->
 
 <section class="checkout-contact">
 
@@ -1058,7 +1100,7 @@ CONTACT
             <div>
 
                 <span>
-                    Օգնության կարիք ունե՞ք
+                    ՀԱՐՑԵՐ ՈՒՆԵ՞Ք
                 </span>
 
                 <h2>
@@ -1068,11 +1110,11 @@ CONTACT
             </div>
 
 
-            <div class="contact-actions">
+            <div class="contact-buttons">
 
                 <a
                     href="tel:+37494631200"
-                    class="contact-action"
+                    class="contact-btn phone"
                 >
 
                     <i class="bi bi-telephone"></i>
@@ -1086,7 +1128,7 @@ CONTACT
                     href="https://wa.me/37494631200"
                     target="_blank"
                     rel="noopener"
-                    class="contact-action whatsapp"
+                    class="contact-btn whatsapp"
                 >
 
                     <i class="bi bi-whatsapp"></i>
@@ -1104,9 +1146,9 @@ CONTACT
 </section>
 
 
-<!-- =====================================================
-FOOTER
-===================================================== -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer class="site-footer">
 
@@ -1129,9 +1171,9 @@ FOOTER
 </footer>
 
 
-<!-- =====================================================
-JAVASCRIPT
-===================================================== -->
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
 <script src="js/header-footer.js"></script>
 
@@ -1141,53 +1183,50 @@ JAVASCRIPT
 
 <script src="js/checkout.js"></script>
 
-<script src="js/header.js"></script>
-
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 ></script>
 
 
-<!-- RIBBON PREVIEW -->
+<!-- =========================================================
+     RIBBON PREVIEW
+========================================================= -->
+
 <script>
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-        const ribbonInput =
-            document.getElementById("ribbonText");
+    const ribbonText =
+        document.getElementById("ribbonText");
 
-        const ribbonPreview =
-            document.getElementById("ribbonPreviewText");
+    const ribbonPreview =
+        document.getElementById("ribbonPreview");
 
-        const ribbonCount =
-            document.getElementById("ribbonCount");
+    const ribbonCounter =
+        document.getElementById("ribbonCounter");
 
 
-        if (!ribbonInput) return;
-
-
-        ribbonInput.addEventListener(
-            "input",
-            function () {
-
-                const value =
-                    this.value.trim();
-
-
-                ribbonPreview.textContent =
-                    value || "Ձեր գրությունը";
-
-
-                ribbonCount.textContent =
-                    this.value.length + "/80";
-
-            }
-        );
-
+    if (!ribbonText) {
+        return;
     }
-);
+
+
+    ribbonText.addEventListener("input", function () {
+
+        const value =
+            this.value.trim();
+
+
+        ribbonPreview.textContent =
+            value || "Ձեր գրությունը";
+
+
+        ribbonCounter.textContent =
+            this.value.length + " / 100";
+
+    });
+
+});
 
 </script>
 
@@ -1195,4 +1234,2215 @@ document.addEventListener(
 </body>
 
 </html>
+```
 
+### 2. Նոր `checkout.css`
+
+```css
+/* =========================================================
+   CHECKOUT — PREMIUM UX
+   Green / Beige / White
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --checkout-dark: #1f4d3a;
+
+    --checkout-green: #3e6b55;
+
+    --checkout-light-green: #eef4ef;
+
+    --checkout-beige: #e8d8c3;
+
+    --checkout-beige-light: #f8f4ee;
+
+    --checkout-white: #ffffff;
+
+    --checkout-text: #30332f;
+
+    --checkout-muted: #7c817c;
+
+    --checkout-border: #e3e5df;
+
+    --checkout-red: #b94a48;
+
+    --checkout-shadow:
+        0 12px 40px rgba(31, 77, 58, 0.07);
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+body {
+
+    background: #f7f6f2;
+
+    color: var(--checkout-text);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.checkout-hero {
+
+    position: relative;
+
+    padding: 75px 0 70px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #1f4d3a,
+            #315f4b
+        );
+
+}
+
+
+.checkout-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -160px;
+    top: -230px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.045);
+
+}
+
+
+.checkout-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: -170px;
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(232,216,195,0.07);
+
+}
+
+
+.checkout-hero-inner {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+}
+
+
+.checkout-kicker {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    color: var(--checkout-beige);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.checkout-kicker i {
+
+    font-size: 18px;
+
+}
+
+
+.checkout-hero h1 {
+
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 50px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+}
+
+
+.checkout-hero h1 span {
+
+    display: block;
+
+    color: var(--checkout-beige);
+
+}
+
+
+.checkout-hero p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.78);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.checkout-page {
+
+    padding: 55px 0 90px;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.checkout-progress {
+
+    max-width: 720px;
+
+    margin: 0 auto 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.progress-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+
+.progress-number {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e6e5df;
+
+    color: #999;
+
+    font-size: 13px;
+
+}
+
+
+.progress-item.completed,
+.progress-item.current {
+
+    color: var(--checkout-dark);
+
+}
+
+
+.progress-item.completed
+.progress-number,
+.progress-item.current
+.progress-number {
+
+    background:
+        var(--checkout-dark);
+
+    color: #ffffff;
+
+}
+
+
+.progress-line {
+
+    flex: 1;
+
+    max-width: 150px;
+
+    height: 1px;
+
+    margin: 0 14px;
+
+    background: #d9d8d1;
+
+}
+
+
+.progress-line.active {
+
+    background:
+        var(--checkout-dark);
+
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.checkout-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        390px;
+
+    gap: 30px;
+
+    align-items: start;
+
+}
+
+
+.checkout-main {
+
+    min-width: 0;
+
+}
+
+
+/* =========================================================
+   CHECKOUT SECTIONS
+========================================================= */
+
+.checkout-section {
+
+    margin-bottom: 22px;
+
+    padding: 32px;
+
+    background:
+        var(--checkout-white);
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius: 20px;
+
+}
+
+
+.section-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.section-top.compact {
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-number {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--checkout-light-green);
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.section-label {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--checkout-green);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.section-top h2 {
+
+    margin: 0 0 5px;
+
+    color:
+        var(--checkout-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+}
+
+
+.section-top p {
+
+    margin: 0;
+
+    color:
+        var(--checkout-muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.form-field {
+
+    min-width: 0;
+
+}
+
+
+.form-field.full {
+
+    grid-column: 1 / -1;
+
+}
+
+
+.form-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--checkout-text);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.form-field label span {
+
+    color:
+        var(--checkout-red);
+
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.field-control {
+
+    position: relative;
+
+}
+
+
+.field-control > i {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        var(--checkout-green);
+
+    font-size: 16px;
+
+    pointer-events: none;
+
+}
+
+
+.field-control input,
+.field-control select {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding:
+        0 15px 0 44px;
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background:
+        #fbfbf9;
+
+    color:
+        var(--checkout-text);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+}
+
+
+.field-control input::placeholder {
+
+    color: #aaa;
+
+}
+
+
+.field-control input:focus,
+.field-control select:focus {
+
+    border-color:
+        var(--checkout-green);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(62,107,85,.08);
+
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.form-field > textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    resize: vertical;
+
+    background:
+        #fbfbf9;
+
+    color:
+        var(--checkout-text);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.form-field > textarea:focus {
+
+    border-color:
+        var(--checkout-green);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(62,107,85,.08);
+
+}
+
+
+/* =========================================================
+   RIBBON SECTION
+========================================================= */
+
+.ribbon-section {
+
+    position: relative;
+
+    margin-bottom: 22px;
+
+    padding: 34px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #dfd2c0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf9,
+            #f5eee4
+        );
+
+}
+
+
+.ribbon-decoration {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.ribbon-decoration span {
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        #d8c4a9;
+
+}
+
+
+.ribbon-decoration i {
+
+    color:
+        #a48763;
+
+    font-size: 15px;
+
+}
+
+
+.ribbon-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 13px;
+
+}
+
+
+.ribbon-icon {
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        var(--checkout-dark);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+}
+
+
+.ribbon-header h2 {
+
+    margin: 0;
+
+    color:
+        var(--checkout-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 23px;
+
+}
+
+
+.ribbon-description {
+
+    max-width: 620px;
+
+    margin: 0 0 20px;
+
+    color:
+        var(--checkout-muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+.ribbon-input-wrapper {
+
+    border:
+        1px solid #ddcfbc;
+
+    border-radius: 13px;
+
+    background:
+        #ffffff;
+
+    overflow: hidden;
+
+}
+
+
+.ribbon-input-wrapper textarea {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 95px;
+
+    padding: 15px;
+
+    border: 0;
+
+    outline: 0;
+
+    resize: vertical;
+
+    color:
+        var(--checkout-text);
+
+    background:
+        transparent;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.ribbon-input-wrapper textarea::placeholder {
+
+    color: #aaa;
+
+}
+
+
+.ribbon-input-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    border-top:
+        1px solid #eee7dc;
+
+    color:
+        #988b7c;
+
+    font-size: 10px;
+
+}
+
+
+.ribbon-input-footer span:first-child {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+
+.ribbon-preview {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+}
+
+
+.preview-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        #9b8c7a;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+}
+
+
+.ribbon-preview-belt {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 230px;
+
+    max-width: 100%;
+
+    min-height: 40px;
+
+    padding: 7px 30px;
+
+    background:
+        var(--checkout-dark);
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(31,77,58,.16);
+
+}
+
+
+.ribbon-preview-belt::before,
+.ribbon-preview-belt::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    border-top:
+        20px solid transparent;
+
+    border-bottom:
+        20px solid transparent;
+
+}
+
+
+.ribbon-preview-belt::before {
+
+    left: -18px;
+
+    border-right:
+        18px solid var(--checkout-dark);
+
+}
+
+
+.ribbon-preview-belt::after {
+
+    right: -18px;
+
+    border-left:
+        18px solid var(--checkout-dark);
+
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.payment-list {
+
+    display: grid;
+
+    gap: 11px;
+
+}
+
+
+.payment-card {
+
+    display: block;
+
+    cursor: pointer;
+
+}
+
+
+.payment-card input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+.payment-card-inner {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 72px;
+
+    padding: 12px 15px;
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius: 13px;
+
+    background:
+        #fbfbf9;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+
+}
+
+
+.payment-card:hover
+.payment-card-inner {
+
+    border-color:
+        var(--checkout-green);
+
+}
+
+
+.payment-card input:checked
++ .payment-card-inner {
+
+    border-color:
+        var(--checkout-dark);
+
+    background:
+        #f2f6f2;
+
+}
+
+
+.payment-symbol {
+
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        var(--checkout-beige);
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 19px;
+
+}
+
+
+.payment-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    gap: 3px;
+
+}
+
+
+.payment-details strong {
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 13px;
+
+}
+
+
+.payment-details small {
+
+    color:
+        var(--checkout-muted);
+
+    font-size: 10px;
+
+}
+
+
+.payment-radio {
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #d5d7d1;
+
+    border-radius: 50%;
+
+    color: transparent;
+
+    font-size: 13px;
+
+}
+
+
+.payment-card input:checked
++ .payment-card-inner
+.payment-radio {
+
+    border-color:
+        var(--checkout-dark);
+
+    background:
+        var(--checkout-dark);
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.checkout-sidebar {
+
+    position: sticky;
+
+    top: 25px;
+
+}
+
+
+.summary-card {
+
+    padding: 26px;
+
+    border:
+        1px solid var(--checkout-border);
+
+    border-radius: 20px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 15px 40px
+        rgba(31,77,58,.08);
+
+}
+
+
+.summary-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid var(--checkout-border);
+
+}
+
+
+.summary-top span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--checkout-green);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.summary-top h2 {
+
+    margin: 0;
+
+    color:
+        var(--checkout-dark);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+}
+
+
+.summary-icon {
+
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        var(--checkout-beige-light);
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.checkout-items {
+
+    max-height: 360px;
+
+    padding: 13px 0;
+
+    overflow-y: auto;
+
+}
+
+
+.checkout-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px 0;
+
+}
+
+
+.checkout-item + .checkout-item {
+
+    border-top:
+        1px solid #eeeeea;
+
+}
+
+
+.checkout-item-image {
+
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        var(--checkout-beige-light);
+
+}
+
+
+.checkout-item-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+.checkout-item-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.checkout-item-info h3 {
+
+    margin: 0 0 4px;
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+}
+
+
+.checkout-item-info p {
+
+    margin: 0;
+
+    color:
+        var(--checkout-muted);
+
+    font-size: 10px;
+
+}
+
+
+.checkout-item-price {
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   TOTALS
+========================================================= */
+
+.summary-calculation {
+
+    padding:
+        17px 0;
+
+    border-top:
+        1px solid var(--checkout-border);
+
+}
+
+
+.summary-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 11px;
+
+    color:
+        var(--checkout-muted);
+
+    font-size: 11px;
+
+}
+
+
+.summary-row strong {
+
+    color:
+        var(--checkout-text);
+
+    font-weight: 600;
+
+}
+
+
+.summary-separator {
+
+    height: 1px;
+
+    margin:
+        15px 0;
+
+    background:
+        var(--checkout-border);
+
+}
+
+
+.summary-total {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.summary-total span {
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.summary-total strong {
+
+    color:
+        var(--checkout-dark);
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   SECURITY NOTE
+========================================================= */
+
+.summary-note {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 17px;
+
+    padding: 11px;
+
+    border-radius: 10px;
+
+    background:
+        #f1f6f2;
+
+    color:
+        var(--checkout-green);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+}
+
+
+.summary-note i {
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.checkout-submit {
+
+    width: 100%;
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        0 19px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background:
+        var(--checkout-dark);
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.checkout-submit:hover {
+
+    background:
+        #163b2d;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 22px
+        rgba(31,77,58,.18);
+
+}
+
+
+.checkout-submit:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+.checkout-submit i {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   BACK
+========================================================= */
+
+.summary-back {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 15px;
+
+    color:
+        var(--checkout-green);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.summary-back:hover {
+
+    color:
+        var(--checkout-dark);
+
+}
+
+
+/* =========================================================
+   SIDEBAR CONTACT
+========================================================= */
+
+.sidebar-contact {
+
+    margin-top: 15px;
+
+    padding: 20px;
+
+    border-radius: 17px;
+
+    background:
+        var(--checkout-dark);
+
+}
+
+
+.sidebar-contact > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        var(--checkout-beige);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.sidebar-contact h3 {
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+}
+
+
+.sidebar-contact a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color:
+        #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   CONTACT CTA
+========================================================= */
+
+.checkout-contact {
+
+    padding:
+        60px 0;
+
+    background:
+        var(--checkout-dark);
+
+}
+
+
+.checkout-contact-inner {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.checkout-contact-inner > div:first-child span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--checkout-beige);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+.checkout-contact-inner h2 {
+
+    margin: 0;
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 29px;
+
+}
+
+
+.contact-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.contact-btn {
+
+    min-height: 45px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        10px 18px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease;
+
+}
+
+
+.contact-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.contact-btn.phone {
+
+    background:
+        #ffffff;
+
+    color:
+        var(--checkout-dark);
+
+}
+
+
+.contact-btn.whatsapp {
+
+    background:
+        var(--checkout-beige);
+
+    color:
+        var(--checkout-dark);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    background:
+        #173a2c;
+
+}
+
+
+.footer-bottom {
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: 10px;
+
+}
+
+
+.footer-bottom a {
+
+    color:
+        rgba(255,255,255,.75);
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+}
+
+
+.footer-bottom a:hover {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1199
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .checkout-layout {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            350px;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 991
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .checkout-hero {
+
+        padding:
+            60px 0;
+
+    }
+
+
+    .checkout-hero h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .checkout-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .checkout-sidebar {
+
+        position: static;
+
+    }
+
+
+    .summary-card {
+
+        max-width: 700px;
+
+        margin: 0 auto;
+
+    }
+
+
+    .sidebar-contact {
+
+        max-width: 700px;
+
+        margin:
+            15px auto 0;
+
+    }
+
+
+    .checkout-contact-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 767
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .checkout-page {
+
+        padding:
+            40px 0 60px;
+
+    }
+
+
+    .checkout-progress {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .progress-item > span:last-child {
+
+        display: none;
+
+    }
+
+
+    .progress-line {
+
+        min-width: 40px;
+
+        margin:
+            0 8px;
+
+    }
+
+
+    .checkout-section,
+    .ribbon-section {
+
+        padding: 23px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .form-field.full {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .checkout-hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .checkout-hero p {
+
+        font-size: 13px;
+
+    }
+
+
+    .section-top h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .ribbon-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .checkout-contact-inner h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .contact-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+
+    .contact-btn {
+
+        width: 100%;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 20px 0;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 576
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .checkout-hero {
+
+        padding:
+            45px 0;
+
+    }
+
+
+    .checkout-hero h1 {
+
+        font-size: 31px;
+
+    }
+
+
+    .checkout-progress {
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+
+    }
+
+
+    .progress-line {
+
+        min-width: 30px;
+
+    }
+
+
+    .section-top {
+
+        gap: 11px;
+
+    }
+
+
+    .section-number {
+
+        width: 37px;
+        height: 37px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .checkout-section,
+    .ribbon-section {
+
+        padding: 19px;
+
+    }
+
+
+    .summary-card {
+
+        padding: 20px;
+
+    }
+
+
+    .summary-total strong {
+
+        font-size: 20px;
+
+    }
+
+
+    .ribbon-preview-belt {
+
+        min-width: 190px;
+
+        font-size: 12px;
+
+    }
+
+}
