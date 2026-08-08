@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hy">
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,7 +12,7 @@
 
     <meta
         name="description"
-        content="Պատվերի ձևակերպում և առաքման տվյալներ"
+        content="Ծաղկեպսակների պատվերի ձևակերպում և առաքման տվյալներ"
     >
 
     <title>Պատվերի ձևակերպում | Ծաղկեպսակներ</title>
@@ -23,13 +24,11 @@
         rel="stylesheet"
     >
 
-
     <!-- Bootstrap Icons -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
-
 
     <!-- Google Fonts -->
     <link
@@ -44,10 +43,9 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
-
 
     <!-- Main CSS -->
     <link
@@ -67,14 +65,11 @@
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- =====================================================
+HEADER
+===================================================== -->
 
-<header
-    class="main-header"
-    id="mainHeader"
->
+<header class="main-header">
 
     <div class="container">
 
@@ -172,31 +167,53 @@
 </header>
 
 
-<!-- =========================
-     CHECKOUT HERO
-========================= -->
+<!-- =====================================================
+CHECKOUT HERO
+===================================================== -->
 
 <section class="checkout-hero">
 
     <div class="container">
 
-        <div class="checkout-hero-content">
+        <div class="checkout-hero-inner">
 
-            <span class="checkout-eyebrow">
-                <i class="bi bi-flower1"></i>
-                Պատվերի ձևակերպում
-            </span>
 
-            <h1>
-                Ձեր պատվերը՝
-                <span>մեկ քայլ հեռավորության վրա</span>
-            </h1>
+            <div class="checkout-hero-text">
 
-            <p>
-                Լրացրեք առաքման տվյալները,
-                և մենք կկապվենք Ձեզ հետ
-                պատվերը հաստատելու համար։
-            </p>
+                <span class="checkout-label">
+
+                    <i class="bi bi-flower1"></i>
+
+                    Պատվերի ձևակերպում
+
+                </span>
+
+
+                <h1>
+
+                    Ձեր պատվերը՝
+                    <span>մեկ գեղեցիկ քայլ հեռավորության վրա</span>
+
+                </h1>
+
+
+                <p>
+
+                    Լրացրեք անհրաժեշտ տվյալները,
+                    ընտրեք առաքման և վճարման տարբերակը,
+                    իսկ մնացածը մենք կհոգանք։
+
+                </p>
+
+            </div>
+
+
+            <div class="checkout-hero-icon">
+
+                <i class="bi bi-bag-heart"></i>
+
+            </div>
+
 
         </div>
 
@@ -205,28 +222,34 @@
 </section>
 
 
-<!-- =========================
-     CHECKOUT
-========================= -->
+<!-- =====================================================
+CHECKOUT MAIN
+===================================================== -->
 
 <main class="checkout-page">
 
     <div class="container">
 
 
-        <!-- PROGRESS -->
+        <!-- TOP PROGRESS -->
 
         <div class="checkout-progress">
 
-            <div class="progress-step completed">
-
-                <span class="progress-icon">
-                    <i class="bi bi-bag-check"></i>
-                </span>
+            <div class="progress-item active">
 
                 <span>
-                    Զամբյուղ
+                    01
                 </span>
+
+                <div>
+                    <strong>
+                        Տվյալներ
+                    </strong>
+
+                    <small>
+                        Առաքում և կապ
+                    </small>
+                </div>
 
             </div>
 
@@ -234,15 +257,21 @@
             <div class="progress-line active"></div>
 
 
-            <div class="progress-step active">
-
-                <span class="progress-icon">
-                    <i class="bi bi-person-vcard"></i>
-                </span>
+            <div class="progress-item">
 
                 <span>
-                    Տվյալներ
+                    02
                 </span>
+
+                <div>
+                    <strong>
+                        Վճարում
+                    </strong>
+
+                    <small>
+                        Ընտրեք եղանակը
+                    </small>
+                </div>
 
             </div>
 
@@ -250,15 +279,21 @@
             <div class="progress-line"></div>
 
 
-            <div class="progress-step">
-
-                <span class="progress-icon">
-                    <i class="bi bi-check2-circle"></i>
-                </span>
+            <div class="progress-item">
 
                 <span>
-                    Հաստատում
+                    03
                 </span>
+
+                <div>
+                    <strong>
+                        Հաստատում
+                    </strong>
+
+                    <small>
+                        Ավարտել պատվերը
+                    </small>
+                </div>
 
             </div>
 
@@ -272,57 +307,54 @@
             class="checkout-form"
         >
 
-
             <div class="row g-4">
 
 
-                <!-- =====================
-                     LEFT
-                ====================== -->
+                <!-- =================================================
+                LEFT COLUMN
+                ================================================= -->
 
                 <div class="col-lg-7">
 
 
-                    <!-- DELIVERY CARD -->
+                    <!-- CUSTOMER -->
 
-                    <section class="checkout-card">
+                    <section class="checkout-section">
 
-                        <div class="card-heading">
+                        <div class="section-top">
 
-                            <div class="heading-icon">
-
-                                <i class="bi bi-truck"></i>
-
+                            <div class="section-number">
+                                01
                             </div>
 
                             <div>
 
-                                <h2>
-                                    Առաքման տվյալներ
-                                </h2>
+                                <span class="section-label">
+                                    Պատվիրատու
+                                </span>
 
-                                <p>
-                                    Խնդրում ենք լրացնել Ձեր տվյալները
-                                </p>
+                                <h2>
+                                    Ձեր տվյալները
+                                </h2>
 
                             </div>
 
                         </div>
 
 
-                        <div class="form-grid">
+                        <div class="checkout-grid">
 
 
                             <!-- NAME -->
 
-                            <div class="form-group full-width">
+                            <div class="checkout-field full">
 
                                 <label for="fullName">
                                     Անուն, ազգանուն
-                                    <span>*</span>
+                                    <b>*</b>
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-person"></i>
 
@@ -342,14 +374,14 @@
 
                             <!-- PHONE -->
 
-                            <div class="form-group">
+                            <div class="checkout-field">
 
                                 <label for="phone">
                                     Հեռախոսահամար
-                                    <span>*</span>
+                                    <b>*</b>
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-telephone"></i>
 
@@ -369,13 +401,13 @@
 
                             <!-- EMAIL -->
 
-                            <div class="form-group">
+                            <div class="checkout-field">
 
                                 <label for="email">
                                     Էլ․ փոստ
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-envelope"></i>
 
@@ -391,17 +423,49 @@
 
                             </div>
 
+                        </div>
+
+                    </section>
+
+
+                    <!-- DELIVERY -->
+
+                    <section class="checkout-section">
+
+                        <div class="section-top">
+
+                            <div class="section-number">
+                                02
+                            </div>
+
+                            <div>
+
+                                <span class="section-label">
+                                    Առաքում
+                                </span>
+
+                                <h2>
+                                    Որտե՞ղ և ե՞րբ
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="checkout-grid">
+
 
                             <!-- CITY -->
 
-                            <div class="form-group">
+                            <div class="checkout-field">
 
                                 <label for="city">
                                     Քաղաք / բնակավայր
-                                    <span>*</span>
+                                    <b>*</b>
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-geo-alt"></i>
 
@@ -420,14 +484,14 @@
 
                             <!-- ADDRESS -->
 
-                            <div class="form-group">
+                            <div class="checkout-field">
 
                                 <label for="address">
                                     Առաքման հասցե
-                                    <span>*</span>
+                                    <b>*</b>
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-house"></i>
 
@@ -447,13 +511,13 @@
 
                             <!-- DATE -->
 
-                            <div class="form-group">
+                            <div class="checkout-field">
 
                                 <label for="deliveryDate">
                                     Առաքման օր
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-calendar3"></i>
 
@@ -470,13 +534,13 @@
 
                             <!-- TIME -->
 
-                            <div class="form-group">
+                            <div class="checkout-field">
 
                                 <label for="deliveryTime">
                                     Նախընտրելի ժամ
                                 </label>
 
-                                <div class="input-wrapper">
+                                <div class="field-control">
 
                                     <i class="bi bi-clock"></i>
 
@@ -517,37 +581,145 @@
                     </section>
 
 
-                    <!-- PAYMENT -->
+                    <!-- RIBBON MESSAGE -->
 
-                    <section class="checkout-card payment-card">
+                    <section class="ribbon-section">
 
-                        <div class="card-heading">
 
-                            <div class="heading-icon">
+                        <div class="ribbon-header">
 
-                                <i class="bi bi-wallet2"></i>
+                            <div class="ribbon-icon">
+
+                                <i class="bi bi-stars"></i>
 
                             </div>
 
                             <div>
 
-                                <h2>
-                                    Վճարման եղանակ
-                                </h2>
+                                <span>
+                                    Հատուկ ցանկություն
+                                </span>
 
-                                <p>
-                                    Ընտրեք Ձեզ հարմար տարբերակը
-                                </p>
+                                <h2>
+                                    Գրություն ծաղկեպսակի ժապավենի վրա
+                                </h2>
 
                             </div>
 
                         </div>
 
 
-                        <div class="payment-options">
+                        <div class="ribbon-content">
 
 
-                            <label class="payment-option">
+                            <div class="ribbon-preview">
+
+                                <div class="ribbon-decoration left">
+                                    <i class="bi bi-flower1"></i>
+                                </div>
+
+
+                                <div class="ribbon-middle">
+
+                                    <small>
+                                        ԺԱՊԱՎԵՆԻ ԳՐՈՒԹՅՈՒՆ
+                                    </small>
+
+                                    <strong id="ribbonPreviewText">
+                                        Ձեր գրությունը
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="ribbon-decoration right">
+                                    <i class="bi bi-flower1"></i>
+                                </div>
+
+                            </div>
+
+
+                            <div class="checkout-field">
+
+                                <label for="ribbonText">
+
+                                    Ի՞նչ գրել ժապավենի վրա
+
+                                    <span>
+                                        (ըստ ցանկության)
+                                    </span>
+
+                                </label>
+
+
+                                <div class="field-control ribbon-input">
+
+                                    <i class="bi bi-pencil"></i>
+
+                                    <input
+                                        type="text"
+                                        id="ribbonText"
+                                        name="ribbonText"
+                                        maxlength="80"
+                                        placeholder="Օր․՝ Հավերժ հիշատակ"
+                                    >
+
+                                    <span
+                                        class="character-count"
+                                        id="ribbonCount"
+                                    >
+                                        0/80
+                                    </span>
+
+                                </div>
+
+
+                                <p class="field-hint">
+
+                                    <i class="bi bi-info-circle"></i>
+
+                                    Գրությունը կպատրաստվի պատվերի հաստատումից հետո։
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- PAYMENT -->
+
+                    <section class="checkout-section">
+
+                        <div class="section-top">
+
+                            <div class="section-number">
+                                03
+                            </div>
+
+                            <div>
+
+                                <span class="section-label">
+                                    Վճարում
+                                </span>
+
+                                <h2>
+                                    Ընտրեք վճարման եղանակը
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-list">
+
+
+                            <!-- CASH -->
+
+                            <label class="payment-card">
 
                                 <input
                                     type="radio"
@@ -556,25 +728,25 @@
                                     checked
                                 >
 
-                                <span class="payment-option-content">
+                                <span class="payment-card-inner">
 
-                                    <span class="payment-icon">
+                                    <span class="payment-symbol">
                                         <i class="bi bi-cash-stack"></i>
                                     </span>
 
-                                    <span class="payment-text">
+                                    <span class="payment-details">
 
                                         <strong>
                                             Կանխիկ
                                         </strong>
 
                                         <small>
-                                            Վճարում առաքման ժամանակ
+                                            Վճարում պատվերը ստանալիս
                                         </small>
 
                                     </span>
 
-                                    <span class="payment-check">
+                                    <span class="payment-selected">
                                         <i class="bi bi-check-lg"></i>
                                     </span>
 
@@ -583,7 +755,9 @@
                             </label>
 
 
-                            <label class="payment-option">
+                            <!-- CARD -->
+
+                            <label class="payment-card">
 
                                 <input
                                     type="radio"
@@ -591,13 +765,13 @@
                                     value="card"
                                 >
 
-                                <span class="payment-option-content">
+                                <span class="payment-card-inner">
 
-                                    <span class="payment-icon">
+                                    <span class="payment-symbol">
                                         <i class="bi bi-credit-card"></i>
                                     </span>
 
-                                    <span class="payment-text">
+                                    <span class="payment-details">
 
                                         <strong>
                                             Բանկային քարտ
@@ -609,7 +783,7 @@
 
                                     </span>
 
-                                    <span class="payment-check">
+                                    <span class="payment-selected">
                                         <i class="bi bi-check-lg"></i>
                                     </span>
 
@@ -618,7 +792,9 @@
                             </label>
 
 
-                            <label class="payment-option">
+                            <!-- TRANSFER -->
+
+                            <label class="payment-card">
 
                                 <input
                                     type="radio"
@@ -626,13 +802,13 @@
                                     value="transfer"
                                 >
 
-                                <span class="payment-option-content">
+                                <span class="payment-card-inner">
 
-                                    <span class="payment-icon">
+                                    <span class="payment-symbol">
                                         <i class="bi bi-bank"></i>
                                     </span>
 
-                                    <span class="payment-text">
+                                    <span class="payment-details">
 
                                         <strong>
                                             Բանկային փոխանցում
@@ -644,7 +820,7 @@
 
                                     </span>
 
-                                    <span class="payment-check">
+                                    <span class="payment-selected">
                                         <i class="bi bi-check-lg"></i>
                                     </span>
 
@@ -658,108 +834,35 @@
                     </section>
 
 
-                    <section class="checkout-card ribbon-card">
-
-```
-<div class="card-heading">
-
-    <div class="heading-icon">
-        <i class="bi bi-ribbon"></i>
-    </div>
-
-    <div>
-        <h2>
-            Ծաղկեպսակի լենտայի գրվածք
-        </h2>
-
-        <p>
-            Գրեք այն տեքստը, որը ցանկանում եք տեսնել ժապավենի վրա
-        </p>
-    </div>
-
-</div>
-
-
-<div class="form-group">
-
-    <label for="ribbonText">
-        Լենտայի գրվածք
-        <span class="optional-label">
-            Ըստ ցանկության
-        </span>
-    </label>
-
-
-    <div class="ribbon-input-wrapper">
-
-        <i class="bi bi-pencil-square"></i>
-
-        <textarea
-            id="ribbonText"
-            name="ribbonText"
-            rows="3"
-            maxlength="100"
-            placeholder="Օր․՝ Սիրով և հավերժ հիշատակով..."
-        ></textarea>
-
-    </div>
-
-
-    <div class="ribbon-help">
-
-        <i class="bi bi-info-circle"></i>
-
-        <span>
-            Գրեք մինչև 100 նիշ։
-            Տեքստը կօգտագործվի ծաղկեպսակի
-            ժապավենի վրա գրության համար։
-        </span>
-
-    </div>
-
-
-    <div class="ribbon-counter">
-
-        <span id="ribbonCounter">0</span> / 100
-
-    </div>
-
-</div>
-```
-
-</section>
-
                     <!-- NOTE -->
 
-                    <section class="checkout-card">
+                    <section class="checkout-section">
 
-                        <div class="card-heading">
+                        <div class="section-top">
 
-                            <div class="heading-icon">
-
-                                <i class="bi bi-chat-left-text"></i>
-
+                            <div class="section-number">
+                                04
                             </div>
 
                             <div>
 
-                                <h2>
-                                    Լրացուցիչ տեղեկություն
-                                </h2>
+                                <span class="section-label">
+                                    Լրացուցիչ
+                                </span>
 
-                                <p>
-                                    Ցանկության դեպքում թողեք հաղորդագրություն
-                                </p>
+                                <h2>
+                                    Հաղորդագրություն
+                                </h2>
 
                             </div>
 
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="checkout-field">
 
                             <label for="orderNote">
-                                Հաղորդագրություն
+                                Լրացուցիչ տեղեկություն
                             </label>
 
                             <textarea
@@ -777,22 +880,24 @@
                 </div>
 
 
-                <!-- =====================
-                     RIGHT
-                ====================== -->
+                <!-- =================================================
+                RIGHT COLUMN
+                ================================================= -->
 
                 <div class="col-lg-5">
 
 
-                    <aside class="order-summary">
+                    <aside class="order-panel">
 
 
-                        <div class="summary-header">
+                        <!-- PANEL HEADER -->
+
+                        <div class="order-panel-header">
 
                             <div>
 
                                 <span>
-                                    Ձեր պատվերը
+                                    Ձեր ընտրությունը
                                 </span>
 
                                 <h2>
@@ -801,7 +906,7 @@
 
                             </div>
 
-                            <div class="summary-bag">
+                            <div class="order-bag">
 
                                 <i class="bi bi-bag-heart"></i>
 
@@ -810,27 +915,27 @@
                         </div>
 
 
-                        <!-- CART ITEMS -->
+                        <!-- ITEMS -->
 
                         <div
                             id="checkoutItems"
                             class="checkout-items"
                         >
 
-                            <!-- JS-ը կտեղադրի ապրանքները -->
+                            <!-- JS -->
 
                         </div>
 
 
-                        <!-- TOTALS -->
+                        <!-- TOTAL -->
 
-                        <div class="summary-totals">
+                        <div class="order-total">
 
 
-                            <div class="summary-row">
+                            <div class="total-row">
 
                                 <span>
-                                    Ապրանքներ
+                                    Ապրանքների արժեք
                                 </span>
 
                                 <strong id="checkoutSubtotal">
@@ -840,7 +945,7 @@
                             </div>
 
 
-                            <div class="summary-row">
+                            <div class="total-row">
 
                                 <span>
                                     Առաքում
@@ -853,10 +958,10 @@
                             </div>
 
 
-                            <div class="summary-divider"></div>
+                            <div class="total-line"></div>
 
 
-                            <div class="summary-total">
+                            <div class="grand-total">
 
                                 <span>
                                     Ընդհանուր
@@ -872,11 +977,11 @@
                         </div>
 
 
-                        <!-- INFO -->
+                        <!-- TRUST -->
 
-                        <div class="order-security">
+                        <div class="trust-box">
 
-                            <div class="security-icon">
+                            <div class="trust-icon">
 
                                 <i class="bi bi-shield-check"></i>
 
@@ -885,12 +990,12 @@
                             <div>
 
                                 <strong>
-                                    Ձեր տվյալները պաշտպանված են
+                                    Անվտանգ պատվեր
                                 </strong>
 
                                 <p>
-                                    Մենք օգտագործում ենք Ձեր տվյալները
-                                    միայն պատվերը մշակելու համար։
+                                    Ձեր տվյալները օգտագործվում են
+                                    միայն պատվերի մշակման նպատակով։
                                 </p>
 
                             </div>
@@ -902,8 +1007,8 @@
 
                         <button
                             type="submit"
-                            class="checkout-submit"
                             id="submitOrder"
+                            class="checkout-submit"
                         >
 
                             <span>
@@ -915,11 +1020,9 @@
                         </button>
 
 
-                        <!-- BACK -->
-
                         <a
                             href="cart.html"
-                            class="back-to-cart"
+                            class="return-cart"
                         >
 
                             <i class="bi bi-arrow-left"></i>
@@ -931,12 +1034,9 @@
 
                     </aside>
 
-
                 </div>
 
-
             </div>
-
 
         </form>
 
@@ -945,9 +1045,9 @@
 </main>
 
 
-<!-- =========================
-     CONTACT CTA
-========================= -->
+<!-- =====================================================
+CONTACT
+===================================================== -->
 
 <section class="checkout-contact">
 
@@ -958,7 +1058,7 @@
             <div>
 
                 <span>
-                    Հարցեր ունե՞ք
+                    Օգնության կարիք ունե՞ք
                 </span>
 
                 <h2>
@@ -968,11 +1068,11 @@
             </div>
 
 
-            <div class="contact-buttons">
+            <div class="contact-actions">
 
                 <a
                     href="tel:+37494631200"
-                    class="contact-btn phone"
+                    class="contact-action"
                 >
 
                     <i class="bi bi-telephone"></i>
@@ -986,7 +1086,7 @@
                     href="https://wa.me/37494631200"
                     target="_blank"
                     rel="noopener"
-                    class="contact-btn whatsapp"
+                    class="contact-action whatsapp"
                 >
 
                     <i class="bi bi-whatsapp"></i>
@@ -1004,9 +1104,9 @@
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- =====================================================
+FOOTER
+===================================================== -->
 
 <footer class="site-footer">
 
@@ -1029,20 +1129,70 @@
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
 
 <script src="js/header-footer.js"></script>
 
 <script src="js/products-data.js"></script>
 
+<script src="js/cart-add.js"></script>
+
 <script src="js/checkout.js"></script>
 
 <script src="js/header.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- RIBBON PREVIEW -->
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const ribbonInput =
+            document.getElementById("ribbonText");
+
+        const ribbonPreview =
+            document.getElementById("ribbonPreviewText");
+
+        const ribbonCount =
+            document.getElementById("ribbonCount");
+
+
+        if (!ribbonInput) return;
+
+
+        ribbonInput.addEventListener(
+            "input",
+            function () {
+
+                const value =
+                    this.value.trim();
+
+
+                ribbonPreview.textContent =
+                    value || "Ձեր գրությունը";
+
+
+                ribbonCount.textContent =
+                    this.value.length + "/80";
+
+            }
+        );
+
+    }
+);
+
+</script>
 
 
 </body>
+
 </html>
+
