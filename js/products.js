@@ -148,64 +148,56 @@ function displayProducts(productList) {
    ORDER NOW
    ========================================== */
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
 
-    const button =
-        event.target.closest(".order-now");
-
+    const button = event.target.closest(".order-now");
 
     if (!button) {
         return;
     }
 
-
     event.preventDefault();
 
+    const productId = Number(button.dataset.id);
 
-    const productId =
-        Number(button.dataset.id);
-
+    console.log("Պատվիրել սեղմվեց:", productId);
 
     if (!productId) {
-        console.error(
-            "Պատվիրել կոճակի product ID-ն բացակայում է։"
-        );
+        console.error("Product ID չկա");
         return;
     }
 
+    if (typeof products === "undefined") {
+        console.error("products տվյալները չեն գտնվել");
+        return;
+    }
 
-    const product =
-        products.find(function(item) {
-
-            return Number(item.id) === productId;
-
-        });
-
+    const product = products.find(function (item) {
+        return Number(item.id) === productId;
+    });
 
     if (!product) {
-
         console.error(
             "Ապրանքը չի գտնվել։ ID:",
             productId
         );
-
         return;
     }
 
+    let cart = [];
 
-    let cart =
-        JSON.parse(
-            localStorage.getItem("cart")
-        ) || [];
+    try {
+        cart =
+            JSON.parse(
+                localStorage.getItem("cart")
+            ) || [];
+    } catch (error) {
+        cart = [];
+    }
 
-
-    const existingProduct =
-        cart.find(function(item) {
-
-            return Number(item.id) === productId;
-
-        });
-
+    const existingProduct = cart.find(function (item) {
+        return Number(item.id) === productId;
+    });
 
     if (existingProduct) {
 
@@ -215,30 +207,26 @@ document.addEventListener("click", function(event) {
     } else {
 
         cart.push({
-
             id: product.id,
-
             name: product.name,
-
             price: Number(product.price),
-
             image: product.image,
-
             quantity: 1
-
         });
 
     }
-
 
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
 
+    console.log(
+        "Ապրանքը ավելացվեց զամբյուղ։",
+        product
+    );
 
-    window.location.href =
-        "cart.html";
+    window.location.href = "cart.html";
 
 });
 
