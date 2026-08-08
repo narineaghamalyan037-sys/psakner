@@ -9,7 +9,7 @@ VARIABLES
 
 :root {
 
-```
+
 --checkout-green-dark: #1f4d3a;
 
 --checkout-green: #3e6b55;
@@ -49,7 +49,7 @@ GENERAL
 
 body {
 
-```
+
 background:
     var(--checkout-bg);
 
@@ -59,7 +59,7 @@ color:
 font-family:
     "Montserrat",
     sans-serif;
-```
+
 
 }
 
@@ -69,7 +69,7 @@ CHECKOUT HERO
 
 .checkout-hero {
 
-```
+
 position: relative;
 
 padding:
@@ -85,13 +85,13 @@ background:
     );
 
 overflow: hidden;
-```
+
 
 }
 
 .checkout-hero::before {
 
-```
+
 content: "";
 
 position: absolute;
@@ -106,13 +106,13 @@ border-radius: 50%;
 
 background:
     rgba(255, 255, 255, 0.05);
-```
+
 
 }
 
 .checkout-hero::after {
 
-```
+
 content: "";
 
 position: absolute;
@@ -127,25 +127,25 @@ border-radius: 50%;
 
 background:
     rgba(232, 216, 195, 0.08);
-```
+
 
 }
 
 .checkout-hero-content {
 
-```
+
 position: relative;
 
 z-index: 2;
 
 max-width: 800px;
-```
+
 
 }
 
 .checkout-eyebrow {
 
-```
+
 display: inline-flex;
 
 align-items: center;
@@ -162,21 +162,21 @@ font-size: 14px;
 font-weight: 700;
 
 letter-spacing: 0.5px;
-```
+
 
 }
 
 .checkout-eyebrow i {
 
-```
+
 font-size: 19px;
-```
+
 
 }
 
 .checkout-hero h1 {
 
-```
+
 margin:
     0 0 20px;
 
@@ -192,24 +192,24 @@ font-size: 52px;
 line-height: 1.15;
 
 font-weight: 600;
-```
+
 
 }
 
 .checkout-hero h1 span {
 
-```
+
 display: block;
 
 color:
     var(--checkout-beige);
-```
+
 
 }
 
 .checkout-hero p {
 
-```
+
 max-width: 650px;
 
 margin: 0;
@@ -220,7 +220,7 @@ color:
 font-size: 17px;
 
 line-height: 1.8;
-```
+
 
 }
 
@@ -230,11 +230,11 @@ MAIN CHECKOUT PAGE
 
 .checkout-page {
 
-```
+
 padding:
     70px 0
     90px;
-```
+
 
 }
 
@@ -244,7 +244,7 @@ PROGRESS
 
 .checkout-progress {
 
-```
+
 display: flex;
 
 align-items: center;
@@ -256,13 +256,13 @@ max-width: 760px;
 margin:
     0 auto
     55px;
-```
+
 
 }
 
 .progress-step {
 
-```
+
 display: flex;
 
 align-items: center;
@@ -276,13 +276,13 @@ font-size: 13px;
 font-weight: 600;
 
 white-space: nowrap;
-```
+
 
 }
 
 .progress-icon {
 
-```
+
 width: 43px;
 height: 43px;
 
@@ -303,14 +303,13 @@ font-size: 17px;
 
 transition:
     0.3s ease;
-```
+
 
 }
 
 .progress-step.completed .progress-icon,
 .progress-step.active .progress-icon {
 
-```
 background:
     var(--checkout-green-dark);
 
@@ -320,23 +319,23 @@ color:
 box-shadow:
     0 6px 18px
     rgba(31, 77, 58, 0.18);
-```
+
 
 }
 
 .progress-step.completed,
 .progress-step.active {
 
-```
+
 color:
     var(--checkout-green-dark);
-```
+
 
 }
 
 .progress-line {
 
-```
+
 flex: 1;
 
 height: 2px;
@@ -346,16 +345,16 @@ margin:
 
 background:
     #ddd6cc;
-```
+
 
 }
 
 .progress-line.active {
 
-```
+
 background:
     var(--checkout-green-dark);
-```
+
 
 }
 
@@ -365,9 +364,9 @@ FORM
 
 .checkout-form {
 
-```
+
 width: 100%;
-```
+
 
 }
 
@@ -377,7 +376,7 @@ CHECKOUT CARD
 
 .checkout-card {
 
-```
+
 position: relative;
 
 margin-bottom: 25px;
@@ -398,22 +397,22 @@ box-shadow:
 transition:
     box-shadow 0.3s ease,
     transform 0.3s ease;
-```
+
 
 }
 
 .checkout-card:hover {
 
-```
+
 box-shadow:
     var(--checkout-shadow-hover);
-```
+
 
 }
 
 .card-heading {
 
-```
+
 display: flex;
 
 align-items: center;
@@ -421,13 +420,13 @@ align-items: center;
 gap: 17px;
 
 margin-bottom: 30px;
-```
+
 
 }
 
 .heading-icon {
 
-```
+
 width: 52px;
 height: 52px;
 
@@ -447,13 +446,12 @@ color:
     var(--checkout-green-dark);
 
 font-size: 23px;
-```
+
 
 }
 
 .card-heading h2 {
 
-```
 margin:
     0 0 5px;
 
@@ -467,13 +465,13 @@ font-family:
 font-size: 25px;
 
 font-weight: 600;
-```
+
 
 }
 
 .card-heading p {
 
-```
+
 margin: 0;
 
 color:
