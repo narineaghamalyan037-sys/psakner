@@ -1,13 +1,9 @@
 ```javascript
 /* =========================================================
    PRODUCTS.JS
-   Products display + Add to Cart + Order Now
+   Product Cards + Order Now
    ========================================================= */
 
-
-/* =========================================================
-   PRODUCT CONTAINER
-   ========================================================= */
 
 const productContainer =
     document.getElementById("productContainer");
@@ -34,8 +30,6 @@ function displayProducts(productList) {
 
     if (!productContainer) return;
 
-
-    /* EMPTY SEARCH RESULT */
 
     if (!productList || productList.length === 0) {
 
@@ -64,8 +58,6 @@ function displayProducts(productList) {
         return;
     }
 
-
-    /* PRODUCT CARDS */
 
     productContainer.innerHTML = productList.map(product => `
 
@@ -99,13 +91,11 @@ function displayProducts(productList) {
                     <!-- CATEGORY -->
 
                     <span class="product-category">
-
                         ${product.category}
-
                     </span>
 
 
-                    <!-- PRODUCT NAME -->
+                    <!-- NAME -->
 
                     <h3>
 
@@ -123,9 +113,7 @@ function displayProducts(productList) {
                     <!-- DESCRIPTION -->
 
                     <p>
-
                         ${product.description}
-
                     </p>
 
 
@@ -138,7 +126,7 @@ function displayProducts(productList) {
                     </div>
 
 
-                    <!-- ACTION BUTTONS -->
+                    <!-- ACTIONS -->
 
                     <div class="product-actions">
 
@@ -189,7 +177,6 @@ function displayProducts(productList) {
 
                     </div>
 
-
                 </div>
 
             </article>
@@ -202,28 +189,37 @@ function displayProducts(productList) {
 
 
 /* =========================================================
-   ADD PRODUCT TO CART
+   ORDER NOW
    ========================================================= */
 
-function addProductToCart(productId) {
+document.addEventListener("click", function (event) {
 
-    const numericId = Number(productId);
+    const button =
+        event.target.closest(".order-now");
 
-    if (!numericId) {
+
+    if (!button) return;
+
+
+    event.preventDefault();
+
+
+    const productId =
+        Number(button.dataset.id);
+
+
+    if (!productId) {
 
         console.error(
-            "Ապրանքի ID-ն սխալ է:",
-            productId
+            "Պատվիրել կոճակի product ID-ն բացակայում է։"
         );
 
-        return false;
+        return;
     }
 
 
-    /* FIND PRODUCT */
-
     const product = products.find(
-        item => Number(item.id) === numericId
+        item => Number(item.id) === productId
     );
 
 
@@ -231,24 +227,24 @@ function addProductToCart(productId) {
 
         console.error(
             "Ապրանքը չի գտնվել։ ID:",
-            numericId
+            productId
         );
 
-        return false;
+        return;
     }
 
 
-    /* GET CART */
+    /* GET CURRENT CART */
 
     let cart = JSON.parse(
         localStorage.getItem("cart")
     ) || [];
 
 
-    /* FIND EXISTING PRODUCT */
+    /* CHECK EXISTING PRODUCT */
 
     const existingProduct = cart.find(
-        item => Number(item.id) === numericId
+        item => Number(item.id) === productId
     );
 
 
@@ -260,6 +256,7 @@ function addProductToCart(productId) {
             Number(existingProduct.quantity || 0) + 1;
 
     }
+
 
     /* ADD NEW PRODUCT */
 
@@ -290,281 +287,12 @@ function addProductToCart(productId) {
     );
 
 
-    /* UPDATE HEADER */
-
-    updateCartCount();
-
-
-    return true;
-
-}
-
-
-/* =========================================================
-   ADD TO CART BUTTON
-   ========================================================= */
-
-document.addEventListener("click", function (event) {
-
-    const button =
-        event.target.closest(".add-to-cart");
-
-
-    if (!button) return;
-
-
-    event.preventDefault();
-
-
-    const productId =
-        Number(button.dataset.id);
-
-
-    if (!productId) return;
-
-
-    const added =
-        addProductToCart(productId);
-
-
-    if (!added) return;
-
-
-    /* VISUAL FEEDBACK */
-
-    showAddedMessage(button);
-
-});
-
-
-/* =========================================================
-   ORDER NOW BUTTON
-   ========================================================= */
-
-document.addEventListener("click", function (event) {
-
-    const button =
-        event.target.closest(".order-now");
-
-
-    if (!button) return;
-
-
-    event.preventDefault();
-
-
-    const productId =
-        Number(button.dataset.id);
-
-
-    if (!productId) {
-
-        console.error(
-            "Պատվերի կոճակի ID-ն բացակայում է։"
-        );
-
-        return;
-    }
-
-
-    /* ADD PRODUCT TO CART */
-
-    const added =
-        addProductToCart(productId);
-
-
-    if (!added) return;
-
-
-    /* GO DIRECTLY TO CART */
+    /* GO TO CART */
 
     window.location.href =
         "cart.html";
 
 });
-
-
-/* =========================================================
-   ADDED TO CART MESSAGE
-   ========================================================= */
-
-function showAddedMessage(button) {
-
-    if (
-        button.dataset.loading === "true"
-    ) {
-
-        return;
-    }
-
-
-    button.dataset.loading = "true";
-
-
-    const originalContent =
-        button.innerHTML;
-
-
-    button.innerHTML = `
-
-        <i class="bi bi-check-circle-fill"></i>
-
-        Ավելացվեց ✓
-
-    `;
-
-
-    button.classList.add(
-        "added-to-cart"
-    );
-
-
-    button.disabled = true;
-
-
-    setTimeout(function () {
-
-        button.innerHTML =
-            originalContent;
-
-
-        button.classList.remove(
-            "added-to-cart"
-        );
-
-
-        button.disabled = false;
-
-
-        button.dataset.loading =
-            "false";
-
-    }, 1800);
-
-}
-
-
-/* =========================================================
-   UPDATE CART COUNT
-   ========================================================= */
-
-function updateCartCount() {
-
-    const cart = JSON.parse(
-        localStorage.getItem("cart")
-    ) || [];
-
-
-    /* TOTAL QUANTITY */
-
-    const totalQuantity =
-        cart.reduce(
-
-            function (total, item) {
-
-                return total +
-                    Number(
-                        item.quantity || 0
-                    );
-
-            },
-
-            0
-
-        );
-
-
-    /* TOTAL PRICE */
-
-    const totalPrice =
-        cart.reduce(
-
-            function (total, item) {
-
-                return total +
-
-                    Number(
-                        item.price || 0
-                    ) *
-
-                    Number(
-                        item.quantity || 0
-                    );
-
-            },
-
-            0
-
-        );
-
-
-    /* HEADER CART COUNT */
-
-    const cartCount =
-        document.getElementById(
-            "cartCount"
-        );
-
-
-    if (cartCount) {
-
-        cartCount.textContent =
-            totalQuantity;
-
-    }
-
-
-    /* MINI CART COUNT */
-
-    const miniCartCount =
-        document.getElementById(
-            "miniCartCount"
-        );
-
-
-    if (miniCartCount) {
-
-        miniCartCount.textContent =
-            totalQuantity;
-
-    }
-
-
-    /* MINI CART TOTAL */
-
-    const miniCartTotal =
-        document.getElementById(
-            "miniCartTotal"
-        );
-
-
-    if (miniCartTotal) {
-
-        miniCartTotal.textContent =
-
-            new Intl.NumberFormat(
-                "hy-AM"
-            ).format(totalPrice)
-
-            + " ֏";
-
-    }
-
-}
-
-
-/* =========================================================
-   INITIALIZE CART COUNT
-   ========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        updateCartCount();
-
-    }
-);
 
 
 /* =========================================================
