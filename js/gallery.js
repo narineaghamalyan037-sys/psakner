@@ -1,27 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ==========================================
-       GALLERY LINKS
-       ========================================== */
-
     const galleryLinks =
         document.querySelectorAll(".gallery-link");
-
-
-    /*
-       Եթե տվյալ էջում Gallery չկա,
-       ոչինչ չենք անում։
-       Console-ում error չենք գրում։
-    */
-
-    if (!galleryLinks.length) {
-        return;
-    }
-
-
-    /* ==========================================
-       LIGHTBOX ELEMENTS
-       ========================================== */
 
     const lightbox =
         document.getElementById("lightbox");
@@ -34,23 +14,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /*
-       Եթե Gallery link կա, բայց Lightbox-ի
-       HTML տարրերը բացակայում են,
-       նույնպես անվտանգ ավարտում ենք։
-    */
+     * Եթե տվյալ էջում Gallery չկա,
+     * JavaScript-ը պարզապես կանգնում է։
+     */
 
     if (
         !lightbox ||
         !lightboxImage ||
         !closeButton
     ) {
+        console.log(
+            "Lightbox-ը այս էջում չկա։"
+        );
+
         return;
     }
 
 
-    /* ==========================================
-       OPEN LIGHTBOX
-       ========================================== */
+    /*
+     * GALLERY LINKS
+     */
 
     galleryLinks.forEach(function (link) {
 
@@ -95,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* ==========================================
-       CLOSE LIGHTBOX
-       ========================================== */
+    /*
+     * CLOSE LIGHTBOX
+     */
 
     function closeLightbox() {
 
@@ -106,13 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        lightboxImage.src = "";
-
-
         lightbox.setAttribute(
             "aria-hidden",
             "true"
         );
+
+
+        lightboxImage.src = "";
 
 
         document.body.style.overflow =
@@ -121,9 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ==========================================
-       CLOSE BUTTON
-       ========================================== */
+    /*
+     * CLOSE BUTTON
+     */
 
     closeButton.addEventListener(
         "click",
@@ -131,9 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* ==========================================
-       CLOSE BY BACKDROP
-       ========================================== */
+    /*
+     * CLICK OUTSIDE IMAGE
+     */
 
     lightbox.addEventListener(
         "click",
@@ -151,9 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    /* ==========================================
-       CLOSE BY ESCAPE
-       ========================================== */
+    /*
+     * ESC KEY
+     */
 
     document.addEventListener(
         "keydown",
