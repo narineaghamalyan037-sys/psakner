@@ -1,9 +1,23 @@
 
 const productContainer = document.getElementById("productContainer");
 
+
+/* ==========================================
+   PRICE FORMAT
+   ========================================== */
+
 function formatPrice(price) {
-    return new Intl.NumberFormat("hy-AM").format(Number(price)) + " ֏";
+
+    return new Intl.NumberFormat("hy-AM").format(
+        Number(price)
+    ) + " ֏";
+
 }
+
+
+/* ==========================================
+   DISPLAY PRODUCTS
+   ========================================== */
 
 function displayProducts(productList) {
 
@@ -11,103 +25,139 @@ function displayProducts(productList) {
         return;
     }
 
+
     if (!productList || productList.length === 0) {
 
-        productContainer.innerHTML =
-            '<div class="col-12">' +
-                '<div class="no-products">' +
-                    '<i class="bi bi-search"></i>' +
-                    '<h3>Ապրանք չի գտնվել</h3>' +
-                    '<p>Փոխեք որոնման կամ ֆիլտրի պայմանները։</p>' +
-                '</div>' +
-            '</div>';
+        productContainer.innerHTML = `
+            <div class="col-12">
+                <div class="no-products">
+
+                    <i class="bi bi-search"></i>
+
+                    <h3>
+                        Ապրանք չի գտնվել
+                    </h3>
+
+                    <p>
+                        Փոխեք որոնման կամ ֆիլտրի պայմանները։
+                    </p>
+
+                </div>
+            </div>
+        `;
 
         return;
     }
 
+
     productContainer.innerHTML = productList.map(function(product) {
 
-        return (
-            '<div class="col-lg-3 col-md-6">' +
+        return `
+            <div class="col-lg-3 col-md-6">
 
-                '<article class="product-card">' +
+                <article class="product-card">
 
-                    '<a href="product-details.html?id=' + product.id + '"' +
-                       ' class="product-image"' +
-                       ' aria-label="' + product.name + '">' +
+                    <a
+                        href="product-details.html?id=${product.id}"
+                        class="product-image"
+                        aria-label="${product.name}"
+                    >
 
-                        '<img src="' + product.image + '"' +
-                             ' alt="' + product.name + '"' +
-                             ' loading="lazy">' +
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            loading="lazy"
+                        >
 
-                    '</a>' +
+                    </a>
 
-                    '<div class="product-info">' +
 
-                        '<span class="product-category">' +
-                            product.category +
-                        '</span>' +
+                    <div class="product-info">
 
-                        '<h3>' +
+                        <span class="product-category">
+                            ${product.category}
+                        </span>
 
-                            '<a href="product-details.html?id=' +
-                                product.id +
-                            '">' +
 
-                                product.name +
+                        <h3>
 
-                            '</a>' +
+                            <a
+                                href="product-details.html?id=${product.id}"
+                            >
+                                ${product.name}
+                            </a>
 
-                        '</h3>' +
+                        </h3>
 
-                        '<p>' +
-                            product.description +
-                        '</p>' +
 
-                        '<div class="price">' +
-                            formatPrice(product.price) +
-                        '</div>' +
+                        <p>
+                            ${product.description}
+                        </p>
 
-                        '<div class="product-actions">' +
 
-                            '<a href="product-details.html?id=' +
-                                product.id +
-                            '"' +
-                            ' class="details-btn">' +
+                        <div class="price">
+                            ${formatPrice(product.price)}
+                        </div>
 
-                                '<i class="bi bi-eye"></i>' +
-                                ' Մանրամասն' +
 
-                            '</a>' +
+                        <div class="product-actions">
 
-                            '<button type="button"' +
-                                ' class="order-btn add-to-cart"' +
-                                ' data-id="' + product.id + '">' +
 
-                                '<i class="bi bi-cart-plus"></i>' +
-                                ' Ավելացնել' +
+                            <!-- ՄԱՆՐԱՄԱՍՆ -->
 
-                            '</button>' +
+                            <a
+                                href="product-details.html?id=${product.id}"
+                                class="details-btn"
+                            >
 
-                            '<button type="button"' +
-                                ' class="order-btn order-now"' +
-                                ' data-id="' + product.id + '">' +
+                                <i class="bi bi-eye"></i>
 
-                                '<i class="bi bi-bag-check"></i>' +
-                                ' Պատվիրել' +
+                                Մանրամասն
 
-                            '</button>' +
+                            </a>
 
-                        '</div>' +
 
-                    '</div>' +
+                            <!-- ԱՎԵԼԱՑՆԵԼ ԶԱՄԲՅՈՒՂ -->
 
-                '</article>' +
+                            <button
+                                type="button"
+                                class="order-btn add-to-cart"
+                                data-id="${product.id}"
+                            >
 
-            '</div>'
-        );
+                                <i class="bi bi-cart-plus"></i>
+
+                                Ավելացնել
+
+                            </button>
+
+
+                            <!-- ՊԱՏՎԻՐԵԼ -->
+
+                            <button
+                                type="button"
+                                class="order-btn order-now"
+                                data-id="${product.id}"
+                            >
+
+                                <i class="bi bi-bag-check"></i>
+
+                                Պատվիրել
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+        `;
 
     }).join("");
+
 }
 
 
@@ -117,24 +167,38 @@ function displayProducts(productList) {
 
 document.addEventListener("click", function(event) {
 
-    var button = event.target.closest(".order-now");
+    const button =
+        event.target.closest(".order-now");
+
 
     if (!button) {
         return;
     }
 
+
     event.preventDefault();
 
-    var productId = Number(button.dataset.id);
+
+    const productId =
+        Number(button.dataset.id);
+
 
     if (!productId) {
-        console.error("Պատվիրել կոճակի ID-ն բացակայում է։");
+
+        console.error(
+            "Պատվիրել կոճակի product ID-ն բացակայում է։"
+        );
+
         return;
     }
 
-    var product = products.find(function(item) {
+
+    const product = products.find(function(item) {
+
         return Number(item.id) === productId;
+
     });
+
 
     if (!product) {
 
@@ -146,13 +210,18 @@ document.addEventListener("click", function(event) {
         return;
     }
 
-    var cart = JSON.parse(
+
+    let cart = JSON.parse(
         localStorage.getItem("cart")
     ) || [];
 
-    var existingProduct = cart.find(function(item) {
+
+    const existingProduct = cart.find(function(item) {
+
         return Number(item.id) === productId;
+
     });
+
 
     if (existingProduct) {
 
@@ -162,19 +231,27 @@ document.addEventListener("click", function(event) {
     } else {
 
         cart.push({
+
             id: product.id,
+
             name: product.name,
+
             price: Number(product.price),
+
             image: product.image,
+
             quantity: 1
+
         });
 
     }
+
 
     localStorage.setItem(
         "cart",
         JSON.stringify(cart)
     );
+
 
     window.location.href = "cart.html";
 
@@ -182,7 +259,8 @@ document.addEventListener("click", function(event) {
 
 
 /* ==========================================
-   DISPLAY PRODUCTS
+   INITIALIZE
    ========================================== */
 
 displayProducts(products);
+
