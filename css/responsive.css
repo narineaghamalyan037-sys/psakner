@@ -138,3 +138,25 @@ font-size:15px;
     }
 
 }
+@media (max-width: 576px) {
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-image {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 27px;
+    }
+
+}
