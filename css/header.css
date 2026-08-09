@@ -104,15 +104,28 @@ justify-content:center;
 
 
 
-@media(max-width:991px){
+.header-viber {
+    width: 40px;
+    height: 40px;
 
-.header-actions{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-margin-top:20px;
+    color: #ffffff;
+    background: #7360f2;
 
-justify-content:center;
+    border-radius: 50%;
 
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.3s ease;
 }
 
-
+.header-viber:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
